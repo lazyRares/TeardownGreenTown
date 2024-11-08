@@ -1,0 +1,1603 @@
+<scene version="1.6.0" shadowVolume="250 100 250">
+	<group name="Default Stuff" pos="0.0 -0.2 0.0">
+		<environment template="sunny" pos="0.0 0.2 0.0" skybox="cool_day.dds" skyboxtint="0.7 0.8 0.9" skyboxrot="25" fogType="classic" fogColor=".3 .4 .9" fogParams="0 200 0.9 1" sunColorTint=".7 .7 .7" puddleamount="0.35" ambience="outdoor/forest.ogg"/>
+		<postprocessing saturation="1.2" colorbalance=".95 1 1" gamma=".9" bloom=".8"/>
+		<boundary pos="0.0 0.2 0.0">
+			<vertex pos="-100.0 -100.0"/>
+			<vertex pos="100.0 -100.0"/>
+			<vertex pos="100.0 100.0"/>
+			<vertex pos="-100.0 100.0"/>
+		</boundary>
+		<script pos="0.0 0.2 0.0" file="main.lua"/>
+		<script pos="0.0 0.2 0.0" file="MOD/script/propag_sayer.lua"/>
+		<group name="Heist" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" layer="heist">
+			<script pos="0.0 0.2 0.0" file="heist.lua" param0="music=MOD/snd/Mus_GreenTown.ogg" param1="firealarm=false"/>
+			<spawnpoint pos="-14.1 7.3 98.4" rot="0.0 -180.0 0.0"/>
+		</group>
+		<group name="Hunted" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" layer="hunted">
+			<script pos="0.0 0.2 0.0" file="challenge.lua" param0="music=MOD/snd/Mus_GreenTown_Angry.ogg" param1="firealarm=false"/>
+			<script pos="40.6 0.2 64.9" rot="0.0 0.0 0.0" file="challengehunted.lua">
+				<body name="Chest" tags="pickup unbreakable target optional" pos="-0.8 91.0 60.0" rot="0.0 0.0 0.0" dynamic="true" desc="Doomstadt Sidewalk; Doomstadt Sidewalk">
+					<vox tags="pickup" pos="0.0 0.0 0.2" file="MOD/vox/greentown_tiles_paved.vox"/>
+				</body>
+				<location tags="itemlocation" pos="-19.0 5.29999 -42.1" rot="0.0 0.0 0.0"/>
+				<location tags="itemlocation" pos="-19.0 5.29999 -35.5" rot="0.0 0.0 0.0"/>
+				<location tags="itemlocation" pos="-19.0 5.29999 -47.69999" rot="0.0 0.0 0.0"/>
+				<location tags="itemlocation" pos="-26.2 5.29999 -42.1" rot="0.0 0.0 0.0"/>
+				<location tags="itemlocation" pos="-26.2 5.29999 -35.5" rot="0.0 0.0 0.0"/>
+				<location tags="itemlocation" pos="-26.2 5.29999 -47.69999" rot="0.0 0.0 0.0"/>
+				<location tags="itemlocation" pos="-32.4 5.29999 -42.1" rot="0.0 0.0 0.0"/>
+				<location tags="itemlocation" pos="-32.4 5.29999 -35.5" rot="0.0 0.0 0.0"/>
+				<location tags="itemlocation" pos="-32.4 5.29999 -47.69999" rot="0.0 0.0 0.0"/>
+			</script>
+			<instance pos="34.2 -8.4 50.2" rot="0.0 0.0 0.0" file="MOD/prefab/mysteriochopter.xml"/>
+			<spawnpoint pos="47.4 6.4 -13.4"/>
+		</group>
+		<group name="Sandbox" pos="0.0 0.0 0.0" layer="sandbox">
+			<script pos="0.0 0.2 0.0" rot="0.0 0.0 0.0" file="sandbox.lua"/>
+			<spawnpoint pos="-14.4 7.1 88.9" rot="0.0 180.0 0.0"/>
+		</group>
+	</group>
+	<group name="Foundational Outer Walls" pos="-11.9 5.8 66.1">
+		<group name="Stair Railing" pos="-7.5 0.0 0.0" rot="0.0 0.0 0.0">
+			<voxbox pos="-0.2 3.591 -1.822" rot="0.0 90.0 0.0" texture="5 0.3" size="4 8 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Metal Post"/>
+			<voxbox pos="-0.2 2.991 -1.022" rot="0.0 90.0 0.0" texture="5 0.3" size="4 8 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Metal Post"/>
+			<voxbox pos="-0.2 2.391 -0.222" rot="0.0 90.0 0.0" texture="5 0.3" size="4 8 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Metal Post"/>
+			<voxbox pos="-0.2 1.791 0.578" rot="0.0 90.0 0.0" texture="5 0.3" size="4 8 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Metal Post"/>
+			<voxbox pos="-0.2 1.191 1.378" rot="0.0 90.0 0.0" texture="5 0.3" size="4 8 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Metal Post"/>
+			<voxbox pos="-0.2 0.591 2.178" rot="0.0 90.0 0.0" texture="5 0.3" size="4 8 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Metal Post"/>
+			<voxbox pos="-0.3 0.02014 2.33982" rot="0.0 90.0 37.0" texture="5 0.3" size="64 3 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Bottom" offset="0.0 -1.0 -102.0"/>
+			<voxbox pos="-0.2 0.99987 2.40018" rot="0.0 90.0 37.0" texture="5 0.3" size="63 2 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Top" offset="0.00003 0.0 -102.0"/>
+			<voxbox pos="-0.3 0.02 2.84" rot="0.0 90.0 0.0" texture="5 0.3" size="6 13 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Post"/>
+		</group>
+		<group name="Stair Railing" pos="-2.4 0.0 0.0" rot="0.0 0.0 0.0">
+			<voxbox pos="-0.2 3.591 -1.822" rot="0.0 90.0 0.0" texture="5 0.3" size="4 8 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Metal Post"/>
+			<voxbox pos="-0.2 2.991 -1.022" rot="0.0 90.0 0.0" texture="5 0.3" size="4 8 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Metal Post"/>
+			<voxbox pos="-0.2 2.391 -0.222" rot="0.0 90.0 0.0" texture="5 0.3" size="4 8 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Metal Post"/>
+			<voxbox pos="-0.2 1.791 0.578" rot="0.0 90.0 0.0" texture="5 0.3" size="4 8 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Metal Post"/>
+			<voxbox pos="-0.2 1.191 1.378" rot="0.0 90.0 0.0" texture="5 0.3" size="4 8 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Metal Post"/>
+			<voxbox pos="-0.2 0.591 2.178" rot="0.0 90.0 0.0" texture="5 0.3" size="4 8 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Metal Post"/>
+			<voxbox pos="-0.3 0.02014 2.33982" rot="0.0 90.0 37.0" texture="5 0.3" size="64 3 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Bottom" offset="0.0 -1.0 -102.0"/>
+			<voxbox pos="-0.2 0.99987 2.40018" rot="0.0 90.0 37.0" texture="5 0.3" size="63 2 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Top" offset="0.00003 0.0 -102.0"/>
+			<voxbox pos="-0.3 0.02 2.84" rot="0.0 90.0 0.0" texture="5 0.3" size="6 13 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Post"/>
+			<voxbox pos="-0.3 3.72 -2.46" rot="0.0 90.0 0.0" texture="5 0.3" size="6 13 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Post"/>
+			<voxbox pos="-5.4 3.72 -2.46" rot="0.0 90.0 0.0" texture="5 0.3" size="6 13 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Post"/>
+			<voxbox pos="14.8 3.8 -22.76" rot="0.0 90.0 0.0" texture="5 0.3" size="6 13 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Post"/>
+			<voxbox pos="14.8 3.8 -7.16" rot="0.0 90.0 0.0" texture="5 0.3" size="6 13 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Post"/>
+			<voxbox pos="14.8 3.8 -7.66" rot="0.0 90.0 0.0" texture="5 0.3" size="153 11 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing" offset="-102.0 0.0 -0.0"/>
+			<voxbox pos="15.3 3.8 -7.76" rot="0.0 0.0 0.0" texture="5 0.3" size="51 11 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing" offset="-102.0 0.0 -0.0"/>
+			<voxbox pos="20.3 3.8 -7.16" rot="0.0 90.0 0.0" texture="5 0.3" size="6 13 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Post"/>
+			<voxbox pos="20.3 3.8 -22.76" rot="0.0 90.0 0.0" texture="5 0.3" size="6 13 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Post"/>
+			<voxbox pos="20.3 3.8 -7.66" rot="0.0 90.0 0.0" texture="5 0.3" size="153 11 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing" offset="-102.0 0.0 -0.0"/>
+			<voxbox pos="20.3 3.8 2.24" rot="0.0 90.0 0.0" texture="5 0.3" size="48 11 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing"/>
+			<voxbox pos="0.1 3.8 -3.06" rot="0.0 0.0 0.0" texture="5 0.3" size="203 11 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing" offset="-254.0 0.0 0.0"/>
+			<voxbox pos="20.3 3.8 -2.46" rot="0.0 90.0 0.0" texture="5 0.3" size="6 13 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Post"/>
+			<voxbox pos="20.3 3.8 2.64" rot="0.0 90.0 0.0" texture="5 0.3" size="6 13 6" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Railing Post"/>
+		</group>
+		<group name="Outer Stone Wall" pos="2.6 0.0 -2.8" rot="0.0 0.0 0.0">
+			<group name="Base Wall" pos="0.1 0.0 0.1">
+				<voxbox pos="10.2 0.0 -20.3" rot="0.0 -90.0 0.0" size="204 36 2" brush="MOD/vox/House Parts/greentown_cobblestone.vox" offset="-203.99998 0.0 0.0"/>
+				<voxbox pos="10.2 0.0 0.1" rot="0.0 -180.0 0.0" size="153 38 2" brush="MOD/vox/House Parts/greentown_cobblestone.vox" offset="-51.0 0.0 0.0"/>
+				<voxbox pos="15.3 0.0 5.2" rot="0.0 90.0 0.0" size="51 38 2" brush="MOD/vox/House Parts/greentown_cobblestone.vox" offset="-51.0 0.0 0.0"/>
+				<voxbox pos="15.3 0.0 0.1" rot="0.0 90.0 0.0" size="204 36 2" brush="MOD/vox/House Parts/greentown_cobblestone.vox" offset="-51.0 0.0 0.0"/>
+				<voxbox pos="10.2 0.0 -20.3" rot="0.0 -90.0 0.0" size="204 5 2" brush="MOD/vox/House Parts/greentown_cobbletrim.vox" offset="-203.99998 0.0 -0.0"/>
+				<voxbox pos="15.3 0.0 0.1" rot="0.0 90.0 0.0" size="204 5 2" brush="MOD/vox/House Parts/greentown_cobbletrim.vox" offset="-51.0 0.0 0.0"/>
+				<voxbox pos="15.3 0.0 5.2" rot="0.0 90.0 0.0" size="51 5 2" brush="MOD/vox/House Parts/greentown_cobbletrim.vox" offset="-51.0 0.0 0.0"/>
+				<voxbox pos="10.2 0.0 0.1" rot="0.0 180.0 0.0" size="153 5 2" brush="MOD/vox/House Parts/greentown_cobbletrim.vox" offset="-51.0 0.0 0.0"/>
+			</group>
+			<group name="Wooden Beams" pos="0.1 0.0 0.0">
+				<voxbox pos="-0.4 0.0 0.3" rot="0.0 90.0 0.0" size="2 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wall Brace" offset="0.0 0.0 0.0"/>
+				<voxbox pos="4.7 0.0 0.3" rot="0.0 90.0 0.0" size="2 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wall Brace" offset="0.0 0.0 0.0"/>
+				<voxbox pos="10.4 0.0 0.5" rot="0.0 180.0 0.0" size="2 37 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wall Brace" offset="0.0 0.0 0.0"/>
+				<voxbox pos="9.6 0.0 0.5" rot="0.0 90.0 0.0" size="2 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wall Brace" offset="0.0 0.0 0.0"/>
+				<voxbox pos="15.2 0.0 -0.3" rot="0.0 0.0 0.0" size="2 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wall Brace" offset="0.0 0.0 0.0"/>
+				<voxbox pos="15.2 0.0 -5.4" rot="0.0 0.0 0.0" size="2 37 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wall Brace" offset="0.0 0.0 0.0"/>
+				<voxbox pos="15.2 0.0 -10.5" rot="0.0 0.0 0.0" size="2 37 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wall Brace" offset="0.0 0.0 0.0"/>
+				<voxbox pos="15.2 0.0 -15.6" rot="0.0 0.0 0.0" size="2 37 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wall Brace" offset="0.0 0.0 0.0"/>
+				<voxbox pos="10.3 0.0 -4.6" rot="0.0 -180.0 0.0" size="2 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wall Brace" offset="0.0 0.0 0.0"/>
+				<voxbox pos="10.3 0.0 -9.7" rot="0.0 -180.0 0.0" size="2 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wall Brace" offset="0.0 0.0 0.0"/>
+				<voxbox pos="10.3 0.0 -14.8" rot="0.0 -180.0 0.0" size="2 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wall Brace" offset="0.0 0.0 0.0"/>
+				<voxbox pos="15.1 0.0 5.5" rot="0.0 90.0 0.0" size="8 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Corner Mould" offset="0.0 0.0 0.0"/>
+				<voxbox pos="15.3 3.4 0.3" rot="-90.0 90.0 0.0" size="3 204 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-0.00002 -101.99998 4.00002"/>
+				<voxbox pos="10.2 3.4 -5.0" rot="-90.0 -90.0 0.0" size="3 51 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-0.00002 -101.99998 4.00002"/>
+				<voxbox pos="15.2 3.4 5.3" rot="-90.0 0.0 0.0" size="3 51 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-0.00002 -101.99998 4.00002"/>
+				<voxbox pos="15.2 3.4 -4.9" rot="-90.0 0.0 0.0" size="3 153 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-0.00002 -101.99998 4.00002"/>
+				<voxbox pos="10.3 3.4 -20.2" rot="-90.0 180.0 0.0" size="3 153 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-0.00002 -101.99998 4.00002"/>
+				<voxbox pos="15.3 2.2 -4.4" rot="-60.0 90.0 0.0" size="5 8 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 0.0 -0.0">
+					<voxbox pos="0.0 0.702 0.017" rot="-10.0 0.0 0.0" size="5 9 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 5.0 -0.0">
+						<voxbox pos="0.0 0.702 0.017" rot="-10.0 0.0 0.0" size="5 9 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 10.0 0.0">
+							<voxbox pos="0.0 0.702 0.017" rot="-10.0 0.0 0.0" size="5 9 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 15.0 0.0">
+								<voxbox pos="0.0 0.702 0.017" rot="-10.0 0.0 0.0" size="5 9 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 20.0 0.0">
+									<voxbox pos="0.0 0.702 0.017" rot="-10.0 0.0 0.0" size="5 9 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 25.0 -0.0">
+										<voxbox pos="0.0 0.702 0.017" rot="-10.0 0.0 0.0" size="5 11 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 25.0 0.0"/>
+									</voxbox>
+								</voxbox>
+							</voxbox>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+				<voxbox pos="15.3 2.2 0.3" rot="-60.0 90.0 0.0" size="5 8 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 0.0 -0.0">
+					<voxbox pos="0.0 0.702 0.017" rot="-10.0 0.0 0.0" size="5 9 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 5.0 -0.0">
+						<voxbox pos="0.0 0.702 0.017" rot="-10.0 0.0 0.0" size="5 9 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 10.0 0.0">
+							<voxbox pos="0.0 0.702 0.017" rot="-10.0 0.0 0.0" size="5 9 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 15.0 0.0">
+								<voxbox pos="0.0 0.702 0.017" rot="-10.0 0.0 0.0" size="5 9 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 20.0 0.0">
+									<voxbox pos="0.0 0.702 0.017" rot="-10.0 0.0 0.0" size="5 9 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 25.0 -0.0">
+										<voxbox pos="0.0 0.702 0.017" rot="-10.0 0.0 0.0" size="5 11 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 25.0 0.0"/>
+									</voxbox>
+								</voxbox>
+							</voxbox>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+				<voxbox pos="10.2 3.2 0.2" rot="-90.0 90.0 0.0" size="1 153 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-0.00001 -50.99999 4.00001"/>
+				<voxbox pos="15.3 3.2 5.3" rot="-90.0 0.0 0.0" size="1 51 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-0.00001 -50.99999 4.00001"/>
+				<voxbox pos="15.3 3.2 0.2" rot="-90.0 0.0 0.0" size="1 204 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-0.00001 -50.99999 4.00001"/>
+				<voxbox pos="10.1 3.2 0.2" rot="-90.0 0.0 0.0" size="1 204 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-0.00001 -50.99999 4.00001"/>
+				<voxbox pos="-5.4 0.0 0.3" rot="0.0 90.0 0.0" size="2 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wall Brace" offset="0.0 0.0 0.0"/>
+			</group>
+			<voxagon pos="11.4 2.4 0.2" rot="90.0 -180.0 0.0" brush="MOD/vox/House Parts/greentown_cobblestone.vox" axis="y" extrude="2">
+				<vertex pos="-1.6 -1.0"/>
+				<vertex pos="1.0 -1.0"/>
+				<vertex pos="1.0 -0.1"/>
+				<vertex pos="-0.3 -0.7"/>
+			</voxagon>
+			<voxagon pos="13.9 2.4 0.2" rot="90.0 -180.0 0.0" brush="MOD/vox/House Parts/greentown_cobblestone.vox" axis="y" extrude="2">
+				<vertex pos="-1.5 -0.1"/>
+				<vertex pos="-1.5 -1.0"/>
+				<vertex pos="1.5 -1.0"/>
+				<vertex pos="-0.2 -0.5"/>
+			</voxagon>
+			<voxagon pos="11.9 2.4 -0.1" rot="90.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_cobblestone.vox" axis="y" extrude="2">
+				<vertex pos="-1.5 -0.1"/>
+				<vertex pos="-1.5 -1.0"/>
+				<vertex pos="1.5 -1.0"/>
+				<vertex pos="-0.2 -0.5"/>
+			</voxagon>
+			<voxagon pos="14.4 2.4 -0.1" rot="90.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_cobblestone.vox" axis="y" extrude="2">
+				<vertex pos="-1.6 -1.0"/>
+				<vertex pos="1.0 -1.0"/>
+				<vertex pos="1.0 -0.1"/>
+				<vertex pos="-0.3 -0.7"/>
+			</voxagon>
+			<voxagon pos="13.9 2.4 -4.5" rot="90.0 -180.0 0.0" brush="MOD/vox/House Parts/greentown_cobblestone.vox" axis="y" extrude="2">
+				<vertex pos="-1.5 -0.1"/>
+				<vertex pos="-1.5 -1.0"/>
+				<vertex pos="1.5 -1.0"/>
+				<vertex pos="-0.2 -0.5"/>
+			</voxagon>
+			<voxagon pos="14.4 2.4 -4.8" rot="90.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_cobblestone.vox" axis="y" extrude="2">
+				<vertex pos="-1.6 -1.0"/>
+				<vertex pos="1.0 -1.0"/>
+				<vertex pos="1.0 -0.1"/>
+				<vertex pos="-0.3 -0.7"/>
+			</voxagon>
+			<voxagon pos="11.4 2.4 -4.5" rot="90.0 -180.0 0.0" brush="MOD/vox/House Parts/greentown_cobblestone.vox" axis="y" extrude="2">
+				<vertex pos="-1.6 -1.0"/>
+				<vertex pos="1.0 -1.0"/>
+				<vertex pos="1.0 -0.1"/>
+				<vertex pos="-0.3 -0.7"/>
+			</voxagon>
+			<voxagon pos="11.9 2.4 -4.8" rot="90.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_cobblestone.vox" axis="y" extrude="2">
+				<vertex pos="-1.5 -0.1"/>
+				<vertex pos="-1.5 -1.0"/>
+				<vertex pos="1.5 -1.0"/>
+				<vertex pos="-0.2 -0.5"/>
+			</voxagon>
+		</group>
+	</group>
+	<group name="Roads" pos="10.3 2.1 20.1" prop0="texture=5 0.5">
+		<voxbox pos="-68.0 3.5 68.9" texture="5 0.3" size="204 2 204" brush="MOD/vox/greentown_tiles_outdoor.vox" offset="0.0 0.0 0.0"/>
+		<voxbox pos="-47.6 3.5 68.9" texture="5 0.3" size="26 2 204" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="0.0 0.0 0.0"/>
+		<voxbox pos="-45.0 3.5 68.9" texture="5 0.3" size="76 2 204" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="26.0 0.0 114.0"/>
+		<voxbox pos="-45.0 3.5 62.6" texture="5 0.3" size="25 2 63" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="77.0 0.0 51.0"/>
+		<voxbox pos="-45.0 3.5 48.3" texture="5 0.3" size="25 2 143" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="77.0 0.0 -41.0"/>
+		<voxbox pos="-42.5 3.5 48.3" texture="5 0.3" size="26 2 26" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="77.0 0.0 -41.0"/>
+		<voxbox pos="-39.9 3.5 38.3" texture="5 0.3" size="25 2 126" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="77.0 0.0 51.0"/>
+		<voxbox pos="-29.7 3.5 48.5" texture="5 0.3" size="102 2 408" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="0.0 0.0 -102.0"/>
+		<voxbox pos="-29.7 7.3 38.3" texture="5 0.3" size="255 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="0.0 0.0 -102.0"/>
+		<voxbox pos="-9.3 7.1 38.3" texture="5 0.3" size="51 2 51" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wood Ceiling" offset="204.0 0.0 -102.0"/>
+		<voxbox pos="-14.4 7.3 38.3" rot="0.0 90.0 0.0" texture="5 0.3" size="204 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="0.0 0.0 -102.0"/>
+		<voxbox pos="-14.4 7.3 23.0" rot="0.0 -180.0 0.0" texture="5 0.3" size="102 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="0.0 0.0 -102.0"/>
+		<voxbox pos="-24.6 7.3 38.3" rot="0.0 -180.0 0.0" texture="5 0.3" size="51 2 153" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="50.99999 0.0 -204.0"/>
+		<voxbox pos="-29.7 7.3 38.3" rot="0.0 -180.0 0.0" texture="5 0.3" size="102 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="50.99999 0.0 -204.0"/>
+		<voxbox pos="-39.9 7.3 33.2" rot="0.0 -90.0 0.0" texture="5 0.3" size="102 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="50.99999 0.0 -204.0"/>
+		<voxbox pos="-39.9 7.3 43.4" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 204" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="50.99999 0.0 -204.0"/>
+		<voxbox pos="-39.9 7.3 17.9" rot="0.0 -90.0 0.0" texture="5 0.3" size="153 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-0.00001 0.0 -204.0"/>
+		<voxbox pos="-45.0 7.3 17.9" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 153" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-0.00001 0.0 -204.0"/>
+		<voxbox pos="-4.2 7.3 43.4" texture="5 0.3" size="255 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="0.0 0.0 -102.0"/>
+		<voxbox pos="-4.2 7.3 43.4" rot="0.0 90.0 0.0" texture="5 0.3" size="255 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="0.0 0.0 -102.0"/>
+		<voxbox pos="0.9 7.3 17.9" rot="0.0 0.0 0.0" texture="5 0.3" size="153 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="0.0 0.0 -102.0"/>
+		<voxbox pos="-9.3 7.3 17.9" rot="0.0 0.0 0.0" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="0.0 0.0 -102.0"/>
+		<voxbox pos="11.1 7.3 -20.4" rot="0.0 0.0 0.0" texture="5 0.3" size="51 2 383" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.0 0.0 -434.0"/>
+		<voxbox pos="0.9 7.3 -53.6" rot="0.0 0.0 0.0" texture="5 0.3" size="51 2 613" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.0 0.0 -664.0"/>
+		<voxbox pos="-29.7 7.3 7.7" rot="0.0 0.0 0.0" texture="5 0.3" size="306 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-153.0 0.0 -102.0"/>
+		<voxbox pos="-39.9 7.3 2.5" rot="0.0 0.0 0.0" texture="5 0.3" size="408 2 52" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-255.0 0.0 -103.0"/>
+		<voxbox pos="-24.6 7.3 -2.6" rot="0.0 0.0 0.0" texture="5 0.3" size="51 2 52" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-306.0 0.0 -103.0"/>
+		<voxbox pos="-9.3 7.3 -12.8" rot="0.0 0.0 0.0" texture="5 0.3" size="51 2 52" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-306.0 0.0 -103.0"/>
+		<voxbox pos="-34.8 7.3 -2.6" rot="0.0 0.0 0.0" texture="5 0.3" size="51 2 52" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-306.0 0.0 -103.0"/>
+		<voxbox pos="-39.9 7.3 -7.7" rot="0.0 0.0 0.0" texture="5 0.3" size="51 2 103" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-306.0 0.0 -103.0"/>
+		<voxbox pos="-45.0 7.3 -7.7" rot="0.0 0.0 0.0" texture="5 0.3" size="51 2 154" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-306.0 0.0 -103.0"/>
+		<voxbox pos="-34.8 7.3 -7.7" rot="0.0 0.0 0.0" texture="5 0.3" size="153 2 52" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-408.0 0.0 -103.0"/>
+		<voxbox pos="-29.7 7.3 -12.8" rot="0.0 0.0 0.0" texture="5 0.3" size="102 2 52" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-408.0 0.0 -103.0"/>
+		<voxbox pos="-29.7 7.3 -43.4" rot="0.0 0.0 0.0" texture="5 0.3" size="306 2 307" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-408.0 0.0 -358.0"/>
+		<voxbox pos="-45.0 7.3 -38.3" rot="0.0 0.0 0.0" texture="5 0.3" size="153 2 103" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-255.00002 0.0 -409.0"/>
+		<voxbox pos="-19.5 7.3 -53.5" rot="0.0 0.0 0.0" texture="5 0.3" size="51 2 101" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-306.0 0.0 -357.0"/>
+		<voxbox pos="-45.0 7.3 -58.6" rot="0.0 0.0 0.0" texture="5 0.3" size="459 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-561.0 0.0 -154.0"/>
+		<voxbox pos="-50.1 7.3 -53.5" rot="0.0 0.0 0.0" texture="5 0.3" size="51 2 561" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-561.0 0.0 -153.0"/>
+		<voxbox pos="-60.3 7.3 -53.5" rot="0.0 0.0 0.0" texture="5 0.3" size="51 2 561" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-561.0 0.0 -153.0"/>
+		<voxbox pos="-60.3 7.3 7.7" rot="0.0 0.0 0.0" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-561.0 0.0 357.0"/>
+		<voxbox pos="-57.7 7.3 2.6" rot="0.0 0.0 0.0" texture="5 0.3" size="25 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-535.0 0.0 357.0"/>
+		<voxbox pos="-60.3 7.3 12.8" rot="0.0 0.0 0.0" texture="5 0.3" size="179 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-561.0 0.0 458.99994"/>
+		<voxbox pos="11.1 7.3 -48.4" rot="0.0 0.0 0.0" texture="5 0.3" size="51 2 127" brush="MOD/vox/greentown_tiles_paved.vox" offset="102.0 0.0 -204.0"/>
+		<voxbox pos="41.70002 7.3 -53.5" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 255" brush="MOD/vox/greentown_tiles_paved.vox" offset="101.99999 0.0 -306.0"/>
+		<voxbox pos="21.30001 7.3 -48.4" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_paved.vox" offset="102.00001 0.0 -102.0"/>
+		<voxbox pos="46.80001 7.3 -48.4" rot="0.0 -90.0 0.0" texture="5 0.3" size="128 2 51" brush="MOD/vox/greentown_tiles_paved.vox" offset="102.00001 0.0 -102.0"/>
+		<voxbox pos="46.8 7.3 -17.8" rot="0.0 -90.0 0.0" texture="5 0.3" size="102 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00001 0.0 -102.0"/>
+		<voxbox pos="57.0 7.3 -17.8" rot="0.0 -90.0 0.0" texture="5 0.3" size="102 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00001 0.0 -102.0"/>
+		<voxbox pos="62.1 7.3 -63.7" rot="0.0 -90.0 0.0" texture="5 0.3" size="255 2 102" brush="MOD/vox/greentown_tiles_outdoor.vox" offset="-50.99999 0.0 -153.0"/>
+		<voxbox pos="51.9 7.3 -68.8" rot="0.0 -90.0 0.0" texture="5 0.3" size="102 2 357" brush="MOD/vox/greentown_tiles_outdoor.vox" offset="102.0 0.0 -153.00002"/>
+		<voxbox pos="16.20002 7.3 -73.90001" rot="0.0 -90.0 0.0" texture="5 0.3" size="102 2 204" brush="MOD/vox/greentown_tiles_outdoor.vox" offset="51.00003 0.0 101.99995"/>
+		<voxbox pos="-4.19999 7.3 -68.8" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 127" brush="MOD/vox/greentown_tiles_outdoor.vox" offset="102.00003 0.0 101.99995"/>
+		<voxbox pos="-14.39999 11.1 -73.90001" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_paved_dark.vox" offset="102.00004 0.0 203.99994"/>
+		<voxbox pos="-29.69999 11.1 -89.20001" rot="0.0 -90.0 0.0" texture="5 0.3" size="204 2 102" brush="MOD/vox/greentown_tiles_paved_dark.vox" offset="-50.99995 0.0 203.99995"/>
+		<voxbox pos="-39.89999 11.1 -84.10002" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_paved_dark.vox" offset="-50.99995 0.0 254.99995"/>
+		<voxbox pos="-27.1 11.1 -119.8" rot="0.0 -90.0 0.0" texture="5 0.3" size="306 2 77" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-305.99994 0.0 228.99995"/>
+		<voxbox pos="-44.99999 11.1 -89.20002" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_paved_dark.vox" offset="-50.99995 0.0 254.99995"/>
+		<voxbox pos="-50.09999 11.1 -73.90002" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 102" brush="MOD/vox/greentown_tiles_paved_dark.vox" offset="-50.99995 0.0 254.99995"/>
+		<voxbox pos="-44.99999 11.1 -84.10002" rot="0.0 -90.0 0.0" texture="5 0.3" size="102 2 153" brush="MOD/vox/greentown_tiles_paved_dark.vox" offset="-50.99995 0.0 254.99995"/>
+		<voxbox pos="-60.29999 7.3 -68.80001" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 102" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00004 0.0 203.99994"/>
+		<voxbox pos="-70.49998 7.3 -53.50001" rot="0.0 -90.0 0.0" texture="5 0.3" size="102 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00004 0.0 203.99994"/>
+		<voxbox pos="-60.3 7.3 -58.60001" rot="0.0 -90.0 0.0" texture="5 0.3" size="102 2 102" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="51.00004 0.0 152.99994"/>
+		<voxbox pos="-60.3 7.3 -33.10001" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 204" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00004 0.0 152.99994"/>
+		<voxbox pos="-65.4 7.3 -2.50001" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 76" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00004 0.0 203.99994"/>
+		<voxbox pos="-67.9 7.3 2.59999" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00004 0.0 228.99994"/>
+		<voxbox pos="-60.3 7.3 7.69999" rot="0.0 -90.0 0.0" texture="5 0.3" size="408 2 127" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00003 0.0 152.99994"/>
+		<voxbox pos="-60.3 7.3 -28.00001" rot="0.0 -90.0 0.0" texture="5 0.3" size="306 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00004 0.0 152.99994"/>
+		<voxbox pos="-80.7 11.1 -22.90001" rot="0.0 -90.0 0.0" texture="5 0.3" size="102 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00004 0.0 305.99994"/>
+		<voxbox pos="-65.4 11.1 -22.90001" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 153" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00004 0.0 203.99994"/>
+		<voxbox pos="-75.6 7.3 -38.20001" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00003 0.0 305.99994"/>
+		<voxbox pos="-80.7 7.3 -33.1" rot="0.0 -90.0 0.0" texture="5 0.3" size="102 2 102" brush="MOD/vox/greentown_tiles_outdoor.vox" offset="102.00003 0.0 305.99994"/>
+		<voxbox pos="-80.7 7.3 -12.7" rot="0.0 -90.0 0.0" texture="5 0.3" size="102 2 102" brush="MOD/vox/greentown_tiles_outdoor.vox" offset="102.00003 0.0 305.99994"/>
+		<voxbox pos="-90.9 7.3 -28.0" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_outdoor.vox" offset="102.00003 0.0 356.99994"/>
+		<voxbox pos="-90.9 7.3 -12.7" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_outdoor.vox" offset="102.00003 0.0 356.99994"/>
+		<voxbox pos="-85.8 7.3 -22.9" rot="0.0 -90.0 0.0" texture="5 0.3" size="102 2 102" brush="MOD/vox/greentown_tiles_outdoor.vox" offset="102.00003 0.0 305.99994"/>
+		<voxbox pos="-70.5 7.3 -43.30001" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00003 0.0 305.99994"/>
+		<voxbox pos="-32.19999 7.3 -68.80001" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 281" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00002 0.0 -26.00006"/>
+		<voxbox pos="-39.89999 7.3 -73.90001" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 102" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00004 0.0 152.99994"/>
+		<voxbox pos="-60.29999 7.3 -73.90001" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 102" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00004 0.0 203.99994"/>
+		<voxbox pos="-16.69999 11.1 -119.80001" rot="0.0 -90.0 0.0" texture="5 0.3" size="306 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-152.99997 0.0 203.99994"/>
+		<voxbox pos="-4.19999 11.1 -73.90001" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_paved_dark.vox" offset="102.00004 0.0 203.99994"/>
+		<voxbox pos="-4.19999 11.1 -79.0" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 153" brush="MOD/vox/greentown_tiles_paved_dark.vox" offset="102.00004 0.0 203.99994"/>
+		<voxbox pos="-19.49999 7.3 -73.90001" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 23" brush="MOD/vox/greentown_tiles_outdoor.vox" offset="51.00003 0.0 101.99995"/>
+		<voxbox pos="-27.1 7.3 -73.9" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 26" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="51.00003 0.0 101.99995"/>
+		<voxbox pos="-19.5 11.1 -89.26" rot="0.0 -90.0 -13.8" texture="5 0.3" size="204 2 23" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="51.00003 0.0 101.99995"/>
+		<voxbox pos="-27.1 11.1 -89.27" rot="0.0 -90.0 -13.8" texture="5 0.3" size="204 2 26" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="51.00003 0.0 101.99995"/>
+		<voxbox pos="26.40001 7.3 -73.90001" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 102" brush="MOD/vox/greentown_tiles_outdoor.vox" offset="51.00003 0.0 50.99995"/>
+		<voxbox pos="57.0 7.3 -68.8" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_outdoor.vox" offset="-50.99998 0.0 -102.0"/>
+		<voxbox pos="57.0 7.3 -38.2" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_outdoor.vox" offset="-50.99998 0.0 -102.0"/>
+		<voxbox pos="41.70002 7.3 -43.3" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_paved.vox" offset="102.00001 0.0 -102.0"/>
+		<voxbox pos="21.3 7.3 -38.2" rot="0.0 -90.0 0.0" texture="5 0.3" size="77 2 51" brush="MOD/vox/greentown_tiles_paved.vox"/>
+		<voxbox pos="41.70002 7.3 -25.5" rot="0.0 -90.0 0.0" texture="5 0.3" size="77 2 102" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00001 0.0 -153.0"/>
+		<voxbox pos="41.70002 7.3 -17.9" rot="0.0 -90.0 0.0" texture="5 0.3" size="103 2 102" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="76.00001 0.0 -153.0"/>
+		<voxbox pos="57.00002 7.3 -7.7" rot="0.0 -90.0 0.0" texture="5 0.3" size="52 2 255" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="76.0 0.0 -306.0"/>
+		<voxbox pos="62.1 7.3 -15.3" rot="0.0 -90.0 0.0" texture="5 0.3" size="77 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="102.00001 0.0 -153.0"/>
+		<voxbox pos="57.00002 7.3 -20.3" rot="0.0 -90.0 0.0" texture="5 0.3" size="25 2 153" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="154.00002 0.0 -204.0"/>
+		<voxbox pos="41.70002 7.3 -33.0" rot="0.0 -90.0 0.0" texture="5 0.3" size="25 2 204" brush="MOD/vox/greentown_tiles_paved.vox" offset="154.00002 0.0 -255.0"/>
+		<voxbox pos="31.50002 7.3 -25.5" rot="0.0 -90.0 0.0" texture="5 0.3" size="25 2 153" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="154.00002 0.0 -153.0"/>
+		<voxbox pos="0.9 7.3 23.0" rot="0.0 0.0 0.0" texture="5 0.3" size="204 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="51.0 0.0 -102.0"/>
+		<voxbox pos="21.3 7.3 28.1" rot="0.0 -90.0 0.0" texture="5 0.3" size="204 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="51.0 0.0 -102.0"/>
+		<voxbox pos="5.99999 7.3 28.1" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="51.0 0.0 -102.0"/>
+		<voxbox pos="31.19998 7.3 -2.5" rot="0.0 -90.0 0.0" texture="5 0.3" size="51 2 150" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="50.99999 0.0 -201.0"/>
+		<voxbox pos="16.19998 7.3 28.1" rot="0.0 -90.0 0.0" texture="5 0.3" size="102 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="51.0 0.0 -102.0"/>
+		<voxbox pos="-24.6 3.5 43.4" texture="5 0.3" size="51 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="0.0 0.0 -102.0"/>
+		<voxbox pos="-29.7 3.7 48.5" rot="0.0 90.0 0.0" texture="5 0.3" size="51 38 51" brush="MOD/vox/greentown_stone_stairs.vox" offset="0.0 0.0 -102.0"/>
+		<voxbox pos="-19.5 3.5 43.4" texture="5 0.3" size="102 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="0.0 0.0 -102.0"/>
+		<voxbox pos="-4.2 3.5 38.3" rot="0.0 -90.0 0.0" texture="5 0.3" size="255 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-51.0 0.0 -101.99999"/>
+		<voxbox pos="-4.2 7.3 22.9" rot="0.0 -90.0 -13.8" texture="5 0.3" size="306 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-102.0 0.0 -101.99999"/>
+		<voxbox pos="-19.5 3.5 58.7" texture="5 0.3" size="102 2 51" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="0.0 0.0 -102.0"/>
+		<voxbox pos="-37.4 3.45 38.3" texture="5 0.5" size="77 2 510" brush="MOD/vox/greentown_tiles_parisian.vox" offset="-26.0 0.0 -204.0"/>
+		<voxbox pos="-42.5 7.25 12.8" rot="0.0 0.0 0.0" texture="5 0.5" size="536 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="-281.0 0.0 -204.0"/>
+		<voxbox pos="-57.8 7.25 7.7" rot="0.0 0.0 0.0" texture="5 0.5" size="281 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="-434.0 0.0 -204.0"/>
+		<voxbox pos="6.0 7.25 -63.69998" rot="0.0 0.0 0.0" texture="5 0.5" size="51 2 765" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -204.0"/>
+		<voxbox pos="-70.5 7.25 -63.7" rot="0.0 0.0 0.0" texture="5 0.5" size="765 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -204.0"/>
+		<voxbox pos="-60.3 7.25 -58.6" rot="0.0 0.0 0.0" texture="5 0.5" size="153 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -204.0"/>
+		<voxbox pos="-55.2 7.25 -53.5" rot="0.0 0.0 0.0" texture="5 0.5" size="51 2 612" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -204.0"/>
+		<voxbox pos="-50.1 7.25 2.6" rot="0.0 0.0 0.0" texture="5 0.5" size="51 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 357.0"/>
+		<voxbox pos="-27.1 7.25 -73.9" rot="0.0 0.0 0.0" texture="5 0.5" size="51 2 102" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -255.0">
+			<voxbox pos="5.1 0.15 -0.00002" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 52" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -67.99998"/>
+			<voxbox pos="-0.2 0.15 -0.00002" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 51" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -67.99998"/>
+			<voxbox pos="-43.4 0.15 10.29998" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 384" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 -401.0"/>
+			<voxbox pos="-43.4 0.15 0.19998" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 102" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 -401.0"/>
+			<voxbox pos="-38.3 0.15 15.49998" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 51" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 -350.0"/>
+			<voxbox pos="-48.3 0.15 28.69998" rot="0.0 -180.0 0.0" texture="5 0.3" size="3 2 84" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 -383.0"/>
+			<voxbox pos="-53.4 0.15 40.79998" rot="0.0 -180.0 0.0" texture="5 0.3" size="3 2 51" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 -350.0"/>
+			<voxbox pos="-63.6 0.15 45.89998" rot="0.0 -180.0 0.0" texture="5 0.3" size="3 2 53" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 -352.0"/>
+			<voxbox pos="-63.6 0.15 71.39998" rot="0.0 -180.0 0.0" texture="5 0.3" size="3 2 53" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 -352.0"/>
+			<voxbox pos="-63.9 0.15 71.49998" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 103" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 -352.0"/>
+			<voxbox pos="-46.0 0.15 122.49998" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 102" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 -353.0"/>
+			<voxbox pos="-63.6 0.15 45.79998" rot="0.0 -90.0 0.0" texture="5 0.3" size="3 2 53" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 -352.0"/>
+			<voxbox pos="-63.6 0.15 66.09998" rot="0.0 -90.0 0.0" texture="5 0.3" size="3 2 54" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 -352.0"/>
+			<voxbox pos="-69.0 0.15 45.79998" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 205" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 -352.0"/>
+			<voxbox pos="-46.0 0.15 71.39999" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 510" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 -352.0"/>
+			<voxbox pos="-53.4 0.15 40.59998" rot="0.0 -90.0 0.0" texture="5 0.3" size="3 2 104" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 -350.0"/>
+		</voxbox>
+		<voxbox pos="-27.1 11.05 -119.8" rot="0.0 0.0 0.0" texture="5 0.5" size="53 2 306" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -255.0"/>
+		<voxbox pos="-27.1 11.05 -89.25999" rot="13.8 0.0 0.0" texture="5 0.5" size="53 2 306" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -255.0">
+			<voxbox pos="5.1 0.15 -0.00002" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 164" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -67.99998"/>
+			<voxbox pos="-0.2 0.15 -0.00002" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 164" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -67.99998"/>
+		</voxbox>
+		<voxbox pos="11.1 7.25 -58.60001" rot="0.0 0.0 0.0" texture="5 0.5" size="408 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -204.0"/>
+		<voxbox pos="11.1 7.25 -30.60001" rot="0.0 0.0 0.0" texture="5 0.5" size="408 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -204.0"/>
+		<voxbox pos="46.8 7.25 -53.5" rot="0.0 0.0 0.0" texture="5 0.5" size="51 2 153" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -204.0"/>
+		<voxbox pos="41.7 7.25 -53.5" rot="0.0 0.0 0.0" texture="5 0.5" size="51 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -204.0"/>
+		<voxbox pos="41.7 7.25 -38.19999" rot="0.0 0.0 0.0" texture="5 0.5" size="102 2 77" brush="MOD/vox/greentown_tiles_parisian.vox" offset="153.00002 0.0 -204.0"/>
+		<voxbox pos="51.9 7.25 -38.19999" rot="0.0 0.0 0.0" texture="5 0.5" size="102 2 179" brush="MOD/vox/greentown_tiles_parisian.vox" offset="153.00002 0.0 -204.0"/>
+		<voxbox pos="57.0 7.25 -20.29998" rot="0.0 0.0 0.0" texture="5 0.5" size="51 2 52" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -51.0"/>
+		<voxbox pos="41.7 7.25 -25.49999" rot="0.0 0.0 0.0" texture="5 0.5" size="102 2 77" brush="MOD/vox/greentown_tiles_parisian.vox" offset="153.00002 0.0 -204.0"/>
+		<voxbox pos="11.1 7.25 -53.5" rot="0.0 0.0 0.0" texture="5 0.5" size="51 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -204.0"/>
+		<voxbox pos="11.1 7.25 -63.69998" rot="0.0 0.0 0.0" texture="5 0.5" size="51 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -204.0"/>
+		<voxbox pos="0.9 7.25 -58.59998" rot="0.0 0.0 0.0" texture="5 0.5" size="51 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -204.0"/>
+		<voxbox pos="-22.0 7.25 -68.79998" rot="0.0 0.0 0.0" texture="5 0.5" size="51 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -204.0"/>
+		<voxbox pos="-32.2 7.25 -68.79998" rot="0.0 0.0 0.0" texture="5 0.5" size="51 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -204.0"/>
+		<voxbox pos="11.1 7.25 -35.60001" rot="0.0 0.0 0.0" texture="5 0.5" size="51 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -204.0"/>
+		<voxbox pos="11.1 7.25 -25.5" rot="0.0 0.0 0.0" texture="5 0.5" size="51 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -204.0"/>
+		<voxbox pos="0.9 7.25 7.7" rot="0.0 0.0 0.0" texture="5 0.5" size="51 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="204.00002 0.0 -204.0"/>
+		<voxbox pos="-29.7 7.25 17.9" rot="0.0 0.0 0.0" texture="5 0.5" size="52 2 51" brush="MOD/vox/greentown_tiles_parisian.vox" offset="-203.99998 0.0 -204.0"/>
+		<voxbox pos="-37.4 7.25 17.85" rot="10.53 0.0 0.0" texture="5 0.5" size="77 2 221" brush="MOD/vox/greentown_tiles_parisian.vox" offset="-26.0 0.0 22.0">
+			<voxbox pos="-0.1 0.15 0.0" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 255" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+		</voxbox>
+		<voxbox pos="-42.5 3.45 52.1" texture="5 0.5" size="51 2 180" brush="MOD/vox/greentown_tiles_parisian.vox" offset="0.0 0.0 -117.0"/>
+		<voxbox pos="-37.5 3.6 69.49998" texture="5 0.3" size="3 2 198" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 108.0"/>
+		<voxbox pos="-42.7 3.6 58.4" texture="5 0.3" size="3 2 33" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 64.0"/>
+		<voxbox pos="-24.7 7.4 18.1" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 306" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+		<voxbox pos="10.9 7.4 -20.3" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 333" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 75.0"/>
+		<voxbox pos="5.8 7.4 -53.5" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 614" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 -206.0"/>
+		<voxbox pos="0.9 7.4 -58.6" rot="0.0 -90.0 0.0" texture="5 0.3" size="3 2 461" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 -206.0"/>
+		<voxbox pos="-50.3 7.4 -53.4" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 560" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 -206.0"/>
+		<voxbox pos="-55.4 7.4 -53.6" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 613" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 -258.0"/>
+		<voxbox pos="-45.2 7.4 7.8" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 84" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 -208.0"/>
+		<voxbox pos="-49.8 7.4 13.0" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 73" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 -208.0"/>
+		<voxbox pos="-29.7 7.4 12.9" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 306" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 -208.0"/>
+		<voxbox pos="30.59998 7.4 2.4" rot="0.0 -90.0 0.0" texture="5 0.3" size="3 2 144" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 264.0"/>
+		<voxbox pos="56.99998 7.4 -2.7" rot="0.0 -90.0 0.0" texture="5 0.3" size="3 2 183" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 255.0"/>
+		<voxbox pos="-29.8 3.6 38.3" texture="5 0.3" size="3 2 102" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 153.0"/>
+		<voxbox pos="-29.8 3.6 48.5" texture="5 0.3" size="3 2 408" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 -102.0"/>
+		<voxagon pos="-41.6 3.5 66.7" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="-0.1 -2.3"/>
+			<vertex pos="1.0 -1.0"/>
+			<vertex pos="2.3 -0.2"/>
+			<vertex pos="4.2 2.2"/>
+			<vertex pos="-0.9 2.2"/>
+		</voxagon>
+		<voxagon pos="33.70002 7.3 -1.6" rot="0.0 -90.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="-0.1 -2.3"/>
+			<vertex pos="1.0 -1.0"/>
+			<vertex pos="2.2 -0.1"/>
+			<vertex pos="3.9 1.6"/>
+			<vertex pos="4.2 2.5"/>
+			<vertex pos="-0.9 2.5"/>
+		</voxagon>
+		<voxagon pos="-40.3 3.5 51.79999" rot="0.0 -90.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -2.9"/>
+			<vertex pos="1.8 -2.2"/>
+			<vertex pos="2.8 -0.9"/>
+			<vertex pos="3.6 0.6"/>
+			<vertex pos="4.6 1.6"/>
+			<vertex pos="6.3 2.3"/>
+			<vertex pos="-0.9 2.2"/>
+		</voxagon>
+		<voxagon pos="42.6 7.3 -22.60001" rot="0.0 0.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -2.8"/>
+			<vertex pos="1.8 -2.1"/>
+			<vertex pos="2.8 -0.9"/>
+			<vertex pos="3.6 0.6"/>
+			<vertex pos="4.6 1.6"/>
+			<vertex pos="5.6 2.3"/>
+			<vertex pos="-0.9 2.3"/>
+		</voxagon>
+		<voxagon pos="27.3 7.3 -71.10001" rot="0.0 0.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_90deg.vox" extrude="2">
+			<vertex pos="-0.9 -2.8"/>
+			<vertex pos="0.0 -2.8"/>
+			<vertex pos="1.7 -1.9"/>
+			<vertex pos="2.5 -0.8"/>
+			<vertex pos="3.1 0.4"/>
+			<vertex pos="3.8 1.2"/>
+			<vertex pos="4.6 1.7"/>
+			<vertex pos="6.4 2.3"/>
+			<vertex pos="-0.9 2.3"/>
+		</voxagon>
+		<voxagon pos="15.3 7.3 -61.39999" rot="0.0 -180.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_90deg.vox" extrude="2">
+			<vertex pos="-0.9 -2.8"/>
+			<vertex pos="1.8 -2.1"/>
+			<vertex pos="2.8 -0.9"/>
+			<vertex pos="3.6 0.6"/>
+			<vertex pos="4.6 1.6"/>
+			<vertex pos="5.6 2.3"/>
+			<vertex pos="-0.9 2.3"/>
+		</voxagon>
+		<voxagon pos="10.1 7.3 17.0" rot="0.0 90.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="-0.2 -2.3"/>
+			<vertex pos="0.8 -0.9"/>
+			<vertex pos="2.3 0.3"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="-54.3 7.3 11.8" rot="0.0 0.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="-0.2 -2.3"/>
+			<vertex pos="0.8 -0.9"/>
+			<vertex pos="2.3 0.3"/>
+			<vertex pos="3.7 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="51.0 7.3 -57.6" rot="0.0 180.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_90deg.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="-0.3 -2.3"/>
+			<vertex pos="0.6 -0.9"/>
+			<vertex pos="2.2 0.4"/>
+			<vertex pos="3.6 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="-25.6 7.3 22.1" rot="0.0 90.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.6 -3.9"/>
+			<vertex pos="2.9 -3.1"/>
+			<vertex pos="3.8 -1.9"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="15.2 7.3 -49.3" rot="0.0 90.0 0.0" brush="MOD/vox/greentown_tiles_paved.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="0.7 -4.1"/>
+			<vertex pos="1.5 -3.8"/>
+			<vertex pos="2.9 -3.1"/>
+			<vertex pos="3.7 -1.9"/>
+			<vertex pos="4.2 -0.5"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="-46.0 7.3 -54.4" rot="0.0 90.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="0.7 -4.1"/>
+			<vertex pos="1.5 -3.8"/>
+			<vertex pos="2.9 -3.1"/>
+			<vertex pos="3.7 -1.9"/>
+			<vertex pos="4.2 -0.5"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="15.2 7.3 -21.3" rot="0.0 90.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="0.3 -4.1"/>
+			<vertex pos="1.5 -3.9"/>
+			<vertex pos="2.7 -3.0"/>
+			<vertex pos="3.6 -1.9"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="42.59999 7.3 -49.4" rot="0.0 0.0 0.0" brush="MOD/vox/greentown_tiles_paved.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.6 -3.7"/>
+			<vertex pos="2.9 -2.8"/>
+			<vertex pos="3.6 -1.8"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="-41.5 7.3 16.9" rot="0.0 0.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.6 -3.7"/>
+			<vertex pos="2.9 -2.8"/>
+			<vertex pos="3.6 -1.8"/>
+			<vertex pos="4.2 -0.4"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="1.8 7.3 -54.5" rot="0.0 0.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.6 -3.7"/>
+			<vertex pos="2.9 -2.8"/>
+			<vertex pos="3.6 -1.8"/>
+			<vertex pos="4.1 -0.5"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="-59.4 7.3 -54.5" rot="0.0 0.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.6 -3.7"/>
+			<vertex pos="2.9 -2.8"/>
+			<vertex pos="3.6 -1.8"/>
+			<vertex pos="4.1 -0.5"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="57.9 7.3 -16.3" rot="0.0 0.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.6 -3.7"/>
+			<vertex pos="2.9 -2.8"/>
+			<vertex pos="3.6 -1.8"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="57.9 7.3 -64.7" rot="0.0 0.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_90deg.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.0 -4.1"/>
+			<vertex pos="1.8 -3.7"/>
+			<vertex pos="2.8 -3.1"/>
+			<vertex pos="3.7 -1.9"/>
+			<vertex pos="4.2 -0.6"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="42.69999 7.3 -34.7" rot="0.0 -90.0 0.0" brush="MOD/vox/greentown_tiles_paved.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.5 -3.8"/>
+			<vertex pos="2.9 -3.0"/>
+			<vertex pos="3.7 -1.9"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="-31.2 7.3 -67.9" rot="0.0 -90.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.5 -3.8"/>
+			<vertex pos="2.9 -3.0"/>
+			<vertex pos="3.7 -1.9"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="58.0 7.3 -37.3" rot="0.0 -90.0 0.0" brush="MOD/vox/greentown_tiles_outdoor.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.5 -3.8"/>
+			<vertex pos="2.9 -3.0"/>
+			<vertex pos="3.7 -1.9"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="58.0 7.3 -6.7" rot="0.0 -90.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.5 -3.8"/>
+			<vertex pos="2.9 -3.0"/>
+			<vertex pos="3.7 -1.9"/>
+			<vertex pos="4.1 -0.7"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="1.9 7.3 8.6" rot="0.0 -90.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.5 -3.8"/>
+			<vertex pos="2.9 -3.0"/>
+			<vertex pos="3.7 -1.9"/>
+			<vertex pos="4.1 -0.7"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="15.3 7.3 -34.7" rot="0.0 -180.0 0.0" brush="MOD/vox/greentown_tiles_paved.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.6 -3.9"/>
+			<vertex pos="2.9 -3.1"/>
+			<vertex pos="3.8 -1.9"/>
+			<vertex pos="4.1 -0.8"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="-45.9 7.3 3.6" rot="0.0 -180.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.6 -3.9"/>
+			<vertex pos="2.9 -3.1"/>
+			<vertex pos="3.8 -1.9"/>
+			<vertex pos="4.1 -0.8"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="-17.8 7.3 -67.8" rot="0.0 -180.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_90deg.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.5 -3.8"/>
+			<vertex pos="2.7 -3.0"/>
+			<vertex pos="3.2 -2.5"/>
+			<vertex pos="3.7 -1.8"/>
+			<vertex pos="4.0 -0.9"/>
+			<vertex pos="4.0 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="-71.4 7.3 -67.8" rot="0.0 -180.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.5 -3.8"/>
+			<vertex pos="2.7 -3.0"/>
+			<vertex pos="3.2 -2.5"/>
+			<vertex pos="3.7 -1.8"/>
+			<vertex pos="4.0 -0.9"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="-71.5 7.3 -69.7" rot="0.0 90.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.5 -3.8"/>
+			<vertex pos="2.7 -3.0"/>
+			<vertex pos="3.2 -2.5"/>
+			<vertex pos="3.7 -1.8"/>
+			<vertex pos="4.1 -0.8"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxbox pos="5.82 7.4 18.168" rot="0.0 108.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002">
+			<voxbox pos="0.0 0.0 1.5" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002">
+				<voxbox pos="0.0 0.0 1.5" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002">
+					<voxbox pos="0.0 0.0 1.5" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002">
+						<voxbox pos="0.0 0.0 1.5" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002">
+							<voxbox pos="0.0 0.0 1.5" rot="0.0 22.0 0.0" texture="5 0.3" size="3 2 8" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="-55.38 7.4 7.668" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002">
+			<voxbox pos="0.0 0.0 1.5" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002">
+				<voxbox pos="0.0 0.0 1.5" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002">
+					<voxbox pos="0.0 0.0 1.5" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002">
+						<voxbox pos="0.0 0.0 1.5" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002">
+							<voxbox pos="0.0 0.0 1.5" rot="0.0 22.0 0.0" texture="5 0.3" size="3 2 8" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="52.12001 7.4 -53.432" rot="0.0 -162.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002">
+			<voxbox pos="0.0 0.0 1.5" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002">
+				<voxbox pos="0.0 0.0 1.5" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002">
+					<voxbox pos="0.0 0.0 1.5" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002">
+						<voxbox pos="0.0 0.0 1.5" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002">
+							<voxbox pos="0.0 0.0 1.5" rot="0.0 22.0 0.0" texture="5 0.3" size="3 2 8" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="-26.2 7.4 18.1" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.27212 0.0 -0.9757" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="14.6 7.4 -53.30001" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.27212 0.0 -0.9757" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="14.5 7.4 -25.2" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.27212 0.0 -0.9757" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="11.3 7.4 -34.0" rot="0.0 -180.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.27212 0.0 -0.9757" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="-21.7 7.4 -67.2" rot="0.0 -180.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.25133 0.0 -0.87789" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 14" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 103.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="-75.3 7.4 -67.2" rot="0.0 -180.0 0.0" texture="5 0.3" size="3 2 17" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.25133 0.0 -0.87789" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 14" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 103.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="-71.99998 7.4 -73.7" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.25133 0.0 -0.87789" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 14" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 103.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="-39.9 7.25 17.85" rot="10.5 0.0 0.0" texture="5 0.5" size="25 2 221" brush="MOD/vox/greentown_tiles_outdoor_square.vox" offset="-26.0 0.0 22.0"/>
+		<group name="Curve Bendy" pos="-40.0 3.6 65.7">
+			<voxbox pos="2.25058 0.0 2.5478" rot="0.0 10.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="1.31988 0.0 1.56776" rot="0.0 40.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="0.26677 0.0 0.62386" rot="0.0 49.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-0.92104 0.0 -0.14368" rot="0.0 58.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-1.77827 0.0 -1.23091" rot="0.0 37.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-2.38122 0.0 -2.52954" rot="0.0 26.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-2.7253 0.0 -3.91937" rot="0.0 15.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+		</group>
+		<group name="Curve Bendy" pos="34.6 7.4 -0.1" rot="0.0 -90.0 0.0">
+			<voxbox pos="2.25058 0.0 2.5478" rot="0.0 10.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="1.31988 0.0 1.56776" rot="0.0 40.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="0.26677 0.0 0.62386" rot="0.0 49.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-0.92104 0.0 -0.14368" rot="0.0 58.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-1.77827 0.0 -1.33091" rot="0.0 37.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-2.38122 0.0 -2.62954" rot="0.0 26.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-2.625 0.0 -4.119" rot="0.0 10.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+		</group>
+		<group name="Curve Bendy" pos="-40.0 3.6 54.7" rot="0.0 0.0 0.0">
+			<voxbox pos="2.51077 0.0 -3.81621" rot="0.0 -11.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="2.21988 0.0 -2.43224" rot="0.0 -20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="1.83649 0.0 -1.13621" rot="0.0 -50.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="0.76482 0.0 -0.20386" rot="0.0 -64.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-0.53381 0.0 0.39909" rot="0.0 -53.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-1.62104 0.0 1.25632" rot="0.0 -32.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-2.36552 0.0 2.34349" rot="0.0 -15.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+		</group>
+		<group name="Curve Bendy" pos="45.5 7.4 -22.70001" rot="0.0 90.0 0.0">
+			<voxbox pos="2.51077 0.0 -3.86621" rot="0.0 -11.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="2.21988 0.0 -2.43224" rot="0.0 -20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="1.78649 0.0 -1.13621" rot="0.0 -49.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="0.76482 0.0 -0.20386" rot="0.0 -64.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-0.53381 0.0 0.39909" rot="0.0 -51.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-1.62104 0.0 1.25632" rot="0.0 -32.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-2.36552 0.0 2.34349" rot="0.0 -14.0 0.0" texture="5 0.3" size="3 2 10" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+		</group>
+		<group name="Curve Bendy" pos="12.4 7.4 -61.30001" rot="0.0 -90.0 0.0">
+			<voxbox pos="2.51077 0.0 -3.86621" rot="0.0 -11.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="2.21988 0.0 -2.43224" rot="0.0 -20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="1.78649 0.0 -1.13621" rot="0.0 -49.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="0.76482 0.0 -0.20386" rot="0.0 -64.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-0.53381 0.0 0.39909" rot="0.0 -51.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-1.62104 0.0 1.25632" rot="0.0 -32.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-2.36552 0.0 2.34349" rot="0.0 -14.0 0.0" texture="5 0.3" size="3 2 10" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+		</group>
+		<group name="Curve Bendy" pos="30.3 7.4 -71.50001" rot="0.0 -90.0 0.0">
+			<voxbox pos="2.51077 0.0 -3.86621" rot="0.0 -11.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="2.21988 0.0 -2.43224" rot="0.0 -20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="1.78649 0.0 -1.13621" rot="0.0 -49.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="0.76482 0.0 -0.20386" rot="0.0 -64.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-0.53381 0.0 0.39909" rot="0.0 -51.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-1.62104 0.0 1.25632" rot="0.0 -32.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-2.36552 0.0 2.34349" rot="0.0 -14.0 0.0" texture="5 0.3" size="3 2 10" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+		</group>
+		<voxbox pos="-37.5 3.6 38.3" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 127" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+		<voxbox pos="16.2 7.4 -30.40002" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 255" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -64.99998"/>
+		<voxbox pos="16.0 7.4 -25.20002" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 257" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -66.99998"/>
+		<voxbox pos="48.8 7.4 -20.10001" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 82" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -64.99998"/>
+		<voxbox pos="16.1 7.4 -53.30002" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 256" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -65.99998"/>
+		<voxbox pos="-16.9 7.4 -63.60002" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 260" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -67.99998"/>
+		<voxbox pos="-22.0 11.2 -119.8" rot="0.0 0 0.0" texture="5 0.3" size="3 2 306" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -118.99998"/>
+		<voxbox pos="-27.3 11.2 -119.8" rot="0.0 0 0.0" texture="5 0.3" size="3 2 306" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -118.99998"/>
+		<voxbox pos="-4.2 7.4 -73.80002" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 312" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -93.99998"/>
+		<voxbox pos="34.1 7.4 -68.70002" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 229" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -93.99998"/>
+		<voxbox pos="61.9 7.4 -63.90002" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 257" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -93.99998"/>
+		<voxbox pos="16.2 7.4 -58.50002" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 305" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -67.99998"/>
+		<voxbox pos="51.8 7.4 -53.50002" rot="0.0 360.0 0.0" texture="5 0.3" size="3 2 153" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -67.99998"/>
+		<voxbox pos="11.3 7.4 -35.50003" rot="0.0 180.0 0.0" texture="5 0.3" size="3 2 129" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -64.99998"/>
+		<voxbox pos="43.2 7.4 -30.7" rot="0.0 -90.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.27212 0.0 -0.9757" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="-30.6 7.4 -63.9" rot="0.0 -90.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.27212 0.0 -0.9757" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="58.6 7.4 -33.3" rot="0.0 -90.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.27212 0.0 -0.9757" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="58.49999 7.4 -2.7" rot="0.0 -90.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-1.78987 0.0 -8.51618" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 88" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 29.00002"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="2.39999 7.4 12.6" rot="0.0 -90.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.18895 0.0 -0.98445" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 11" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 106.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="-50.00001 7.4 4.1" rot="0.0 -180.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5342 0.0 -1.39397" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 16" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="-0.00001 0.0 101.0">
+							<voxbox pos="-0.18895 0.0 -0.98445" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 11" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 106.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="-37.50001 7.4 16.4" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5342 0.0 -1.39397" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 16" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="-0.00001 0.0 101.0">
+							<voxbox pos="-0.18895 0.0 -0.98445" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 11" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 106.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="46.50001 7.4 -50.00003" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.27212 0.0 -0.9757" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="46.50001 7.4 -50.00003" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.27212 0.0 -0.9757" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="5.80001 7.4 -55.00003" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.27212 0.0 -0.9757" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="-46.69999 7.4 -58.30003" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.27212 0.0 -0.9757" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="-55.39999 7.4 -55.10003" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.27212 0.0 -0.9757" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="61.90001 7.4 -65.40002" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.27212 0.0 -0.9757" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="61.90001 7.4 -16.80003" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.27212 0.0 -0.9757" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxbox pos="46.50001 7.4 -48.50003" rot="0.0 0.0 0.0" texture="5 0.3" size="3 2 129" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00001 0.0 -64.99998"/>
+		<group name="Curve Bendy" pos="-33.5 7.4 10.09999" rot="0.0 -90.0 0.0">
+			<voxbox pos="2.51077 0.0 -3.86621" rot="0.0 -11.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="2.21988 0.0 -2.43224" rot="0.0 -20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="1.78649 0.0 -1.13621" rot="0.0 -49.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="0.76482 0.0 -0.20386" rot="0.0 -64.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-0.53381 0.0 0.39909" rot="0.0 -51.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-1.62104 0.0 1.25632" rot="0.0 -32.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-2.36552 0.0 2.34349" rot="0.0 -14.0 0.0" texture="5 0.3" size="3 2 10" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+		</group>
+		<voxagon pos="-30.6 7.3 10.0" rot="0.0 -180.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -2.8"/>
+			<vertex pos="1.8 -2.1"/>
+			<vertex pos="2.8 -0.9"/>
+			<vertex pos="3.6 0.6"/>
+			<vertex pos="4.6 1.6"/>
+			<vertex pos="5.6 2.3"/>
+			<vertex pos="-0.9 2.3"/>
+		</voxagon>
+		<voxbox pos="-72.09998 7.4 -58.4" rot="0.0 90.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+			<voxbox pos="-0.45 0.0 -1.3" rot="0.0 18.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+				<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+					<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+						<voxbox pos="-0.5 0.0 -1.3" rot="0.0 20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 102.0">
+							<voxbox pos="-0.25133 0.0 -0.87789" rot="0.0 12.0 0.0" texture="5 0.3" size="3 2 14" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.0 0.0 103.0"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</voxbox>
+		<voxagon pos="-71.5 7.3 -54.4" rot="0.0 90.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -4.1"/>
+			<vertex pos="1.5 -3.8"/>
+			<vertex pos="2.7 -3.0"/>
+			<vertex pos="3.2 -2.5"/>
+			<vertex pos="3.7 -1.8"/>
+			<vertex pos="4.1 -0.8"/>
+			<vertex pos="4.2 1.0"/>
+			<vertex pos="-0.9 1.0"/>
+		</voxagon>
+		<voxagon pos="-77.9 7.3 -39.1" rot="0.0 90.0 0.0" brush="MOD/vox/greentown_tiles_outdoor_square.vox" extrude="2">
+			<vertex pos="-0.9 -2.8"/>
+			<vertex pos="1.8 -2.1"/>
+			<vertex pos="2.8 -0.9"/>
+			<vertex pos="3.6 0.6"/>
+			<vertex pos="4.6 1.6"/>
+			<vertex pos="5.6 2.3"/>
+			<vertex pos="-0.9 2.3"/>
+		</voxagon>
+		<group name="Curve Bendy" pos="-77.99999 7.4 -41.99999" rot="0.0 180.0 0.0">
+			<voxbox pos="2.51077 0.0 -3.86621" rot="0.0 -11.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="2.21988 0.0 -2.43224" rot="0.0 -20.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="1.78649 0.0 -1.13621" rot="0.0 -49.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="0.76482 0.0 -0.20386" rot="0.0 -64.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-0.53381 0.0 0.39909" rot="0.0 -51.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-1.62104 0.0 1.25632" rot="0.0 -32.0 0.0" texture="5 0.3" size="3 2 15" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+			<voxbox pos="-2.36552 0.0 2.34349" rot="0.0 -14.0 0.0" texture="5 0.3" size="3 2 10" brush="MOD/vox/greentown_trim_sidewalk.vox" offset="0.00002 0.0 189.00002"/>
+		</group>
+	</group>
+	<group name="Funky Fromage" pos="-4.1 5.8 73.7">
+		<group name="Walls" pos="0.0 0.0 0.0">
+			<group name="Outer Walls" pos="0.0 0.0 0.0" prop0="texture=10 0.4">
+				<group name="Wall" pos="-4.9 0.0 -0.10001" rot="0.0 -90.0 0.0">
+					<group name="Base Wall" pos="0.1 0.0 0.1">
+						<voxbox pos="5.1 0.0 0.1" rot="0.0 -180.0 0.0" size="102 38 2" brush="MOD/vox/House Parts/greentown_cobblestone.vox" offset="0.0 0.0 0.0"/>
+						<voxbox pos="5.1 0.0 0.1" rot="0.0 -180.0 0.0" size="102 5 2" brush="MOD/vox/House Parts/greentown_cobbletrim.vox" offset="0.0 0.0 0.0"/>
+						<voxbox pos="5.1 2.5 -0.00001" rot="0.0 -90.0 0.0" size="1 13 102" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Outer Plaster Decorational" offset="0.0 0.0 0.0">
+							<voxbox pos="0.0 0.0 0.0" rot="0.0 -90.0 0.0" size="102 13 1" brush="MOD/vox/House Parts/greentown_plaster_exposed.vox" offset="0.0 0.0 0.0"/>
+						</voxbox>
+					</group>
+					<group name="Wooden Beams" pos="0.1 0.0 0.0">
+						<voxbox pos="-0.4 0.0 0.3" rot="0.0 90.0 0.0" size="2 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wall Brace" offset="0.0 0.0 0.0"/>
+						<voxbox pos="-5.3 0.0 0.4" rot="0.0 90.0 0.0" size="8 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Corner Mould" offset="0.0 0.0 0.0"/>
+					</group>
+				</group>
+				<group name="Wall" pos="-0.1 0.0 4.89999">
+					<group name="Base Wall" pos="0.1 0.0 0.1">
+						<voxbox pos="5.1 0.0 0.1" rot="0.0 -180.0 0.0" size="102 38 2" brush="MOD/vox/House Parts/greentown_cobblestone.vox" offset="0.0 0.0 0.0"/>
+						<voxbox pos="5.1 0.0 0.1" rot="0.0 -180.0 0.0" size="102 5 2" brush="MOD/vox/House Parts/greentown_cobbletrim.vox" offset="0.0 0.0 0.0"/>
+						<voxbox pos="5.1 2.5 -0.00001" rot="0.0 -90.0 0.0" size="1 13 102" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Outer Plaster Decorational" offset="0.0 0.0 0.0">
+							<voxbox pos="0.0 0.0 0.0" rot="0.0 -90.0 0.0" size="102 13 1" brush="MOD/vox/House Parts/greentown_plaster_exposed.vox" offset="0.0 0.0 0.0"/>
+						</voxbox>
+					</group>
+					<group name="Wooden Beams" pos="0.1 0.0 0.0">
+						<voxbox pos="-0.4 0.0 0.3" rot="0.0 90.0 0.0" size="2 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wall Brace" offset="0.0 0.0 0.0"/>
+						<voxbox pos="-5.3 0.0 0.4" rot="0.0 90.0 0.0" size="8 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Corner Mould" offset="0.0 0.0 0.0"/>
+					</group>
+				</group>
+				<group name="Wall" pos="4.9 0.0 0.1" rot="0.0 90.0 0.0">
+					<group name="Base Wall" pos="0.1 0.0 0.1">
+						<voxbox pos="5.1 0.0 0.1" rot="0.0 -180.0 0.0" size="102 38 2" brush="MOD/vox/House Parts/greentown_cobblestone.vox" offset="0.0 0.0 0.0"/>
+						<voxbox pos="5.1 0.0 0.1" rot="0.0 -180.0 0.0" size="102 5 2" brush="MOD/vox/House Parts/greentown_cobbletrim.vox" offset="0.0 0.0 0.0"/>
+						<voxbox pos="5.1 2.5 -0.00001" rot="0.0 -90.0 0.0" size="1 13 102" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Outer Plaster Decorational" offset="0.0 0.0 0.0">
+							<voxbox pos="0.0 0.0 0.0" rot="0.0 -90.0 0.0" size="102 13 1" brush="MOD/vox/House Parts/greentown_plaster_exposed.vox" offset="0.0 0.0 0.0"/>
+						</voxbox>
+					</group>
+					<group name="Wooden Beams" pos="0.1 0.0 0.0">
+						<voxbox pos="-0.4 0.0 0.3" rot="0.0 90.0 0.0" size="2 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wall Brace" offset="0.0 0.0 0.0"/>
+						<voxbox pos="-5.3 0.0 0.4" rot="0.0 90.0 0.0" size="8 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Corner Mould" offset="0.0 0.0 0.0"/>
+					</group>
+				</group>
+				<group name="Wall" pos="0.1 0.0 -4.9" rot="0.0 180.0 0.0">
+					<group name="Base Wall" pos="0.1 0.0 0.1">
+						<voxbox pos="5.1 0.0 0.1" rot="0.0 -180.0 0.0" size="102 38 2" brush="MOD/vox/House Parts/greentown_cobblestone.vox" offset="0.0 0.0 0.0"/>
+						<voxbox pos="5.1 0.0 0.1" rot="0.0 -180.0 0.0" size="102 5 2" brush="MOD/vox/House Parts/greentown_cobbletrim.vox" offset="0.0 0.0 0.0"/>
+						<voxbox pos="5.1 2.5 -0.00001" rot="0.0 -90.0 0.0" size="1 13 102" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Outer Plaster Decorational" offset="0.0 0.0 0.0">
+							<voxbox pos="0.0 0.0 0.0" rot="0.0 -90.0 0.0" size="102 13 1" brush="MOD/vox/House Parts/greentown_plaster_exposed.vox" offset="0.0 0.0 0.0"/>
+						</voxbox>
+					</group>
+					<group name="Wooden Beams" pos="0.1 0.0 0.0">
+						<voxbox pos="-0.4 0.0 0.3" rot="0.0 90.0 0.0" size="2 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wall Brace" offset="0.0 0.0 0.0"/>
+						<voxbox pos="-5.3 0.0 0.4" rot="0.0 90.0 0.0" size="8 38 8" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Corner Mould" offset="0.0 0.0 0.0"/>
+					</group>
+				</group>
+			</group>
+			<group name="Inner Walls" pos="0.0 0.0 0.0" prop0="texture=31 0.4">
+				<voxbox pos="-4.9 0.0 4.8" size="98 38 1" brush="MOD/vox/House Parts/greentown_interior_walls.vox" object="Green Stripes" offset="-47.0 0.0 0.0">
+					<voxbox pos="0.1 0.0 0.1" rot="0.0 90.0 0.0" size="1 13 96" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Interior - Wainscot Residential Email" offset="-47.0 0.0 0.0"/>
+					<voxbox pos="0.1 3.5 0.1" rot="0.0 90.0 0.0" size="1 3 97" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Interior - Top Wall Trim" offset="-47.0 0.0 0.0"/>
+				</voxbox>
+				<voxbox pos="-4.9 0.0 4.9" rot="0.0 90.0 0.0" size="98 38 1" brush="MOD/vox/House Parts/greentown_interior_walls.vox" object="Green Stripes" offset="-47.0 0.0 0.0"/>
+				<voxbox pos="-4.9 0.0 4.9" rot="0.0 90.0 0.0" size="98 38 1" brush="MOD/vox/House Parts/greentown_interior_walls.vox" object="Green Stripes" offset="-47.0 0.0 0.0">
+					<voxbox pos="0.1 0.0 0.1" rot="0.0 90.0 0.0" size="1 13 96" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Interior - Wainscot Residential Email" offset="-47.0 0.0 0.0"/>
+					<voxbox pos="0.1 3.5 0.1" rot="0.0 90.0 0.0" size="1 3 97" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Interior - Top Wall Trim" offset="-47.0 0.0 0.0"/>
+				</voxbox>
+				<voxbox pos="4.9 0.0 -4.9" rot="0.0 -90.0 0.0" size="98 38 1" brush="MOD/vox/House Parts/greentown_interior_walls.vox" object="Green Stripes" offset="-47.0 0.0 0.0">
+					<voxbox pos="0.1 0.0 0.1" rot="0.0 90.0 0.0" size="1 13 96" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Interior - Wainscot Residential Email" offset="-47.0 0.0 0.0"/>
+					<voxbox pos="0.1 3.5 0.1" rot="0.0 90.0 0.0" size="1 3 97" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Interior - Top Wall Trim" offset="-47.0 0.0 0.0"/>
+				</voxbox>
+				<voxbox pos="4.9 0.0 -4.8" rot="0.0 180.0 0.0" size="98 38 1" brush="MOD/vox/House Parts/greentown_interior_walls.vox" object="Green Stripes" offset="-47.0 0.0 0.0">
+					<voxbox pos="0.1 0.0 0.1" rot="0.0 90.0 0.0" size="1 13 96" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Interior - Wainscot Residential Email" offset="-47.0 0.0 0.0"/>
+					<voxbox pos="0.1 3.5 0.1" rot="0.0 90.0 0.0" size="1 3 97" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Interior - Top Wall Trim" offset="-47.0 0.0 0.0"/>
+				</voxbox>
+				<voxagon pos="0.0 5.3 5.0" rot="90.0 180.0 0.0" brush="MOD/vox/House Parts/greentown_interior_walls.vox" object="Base Plaster - Recolor" offset="0 25" axis="y" extrude="1">
+					<vertex pos="4.8 1.1"/>
+					<vertex pos="1.0 1.1"/>
+					<vertex pos="-4.7 1.1"/>
+					<vertex pos="0.0 -3.0"/>
+				</voxagon>
+				<voxagon pos="0.0 5.3 -4.9" rot="90.0 180.0 0.0" brush="MOD/vox/House Parts/greentown_interior_walls.vox" object="Base Plaster - Recolor" offset="0 25" axis="y" extrude="1">
+					<vertex pos="4.8 1.1"/>
+					<vertex pos="1.0 1.1"/>
+					<vertex pos="-4.7 1.1"/>
+					<vertex pos="0.0 -3.0"/>
+				</voxagon>
+			</group>
+		</group>
+		<group name="Roof" pos="0.1 3.1 0.0">
+			<group name="Roof Wall" pos="-0.1 1.1 5.1" prop0="texture=10 0.4">
+				<voxbox pos="0.0 0.0 0.0" rot="0.0 -90.0 0.0" size="1 38 45" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Roof Wall Beams" offset="1.0 0.0 -0.0"/>
+				<voxbox pos="0.0 0.0 0.1" rot="0.0 90.0 0.0" size="1 38 45" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Roof Wall Beams" offset="0.0 0.0 0.0"/>
+				<voxagon pos="0.0 1.1 -0.1" rot="90.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_plaster_exposed.vox" offset="0 25" axis="y" extrude="1">
+					<vertex pos="4.7 1.1"/>
+					<vertex pos="1.0 1.1"/>
+					<vertex pos="-4.6 1.1"/>
+					<vertex pos="0.0 -2.8"/>
+				</voxagon>
+				<group name="Roof Beams" pos="0.0 -1.1 0.1" rot="0.0 0.0 0.0">
+					<voxbox pos="4.9 1.1 -0.4" rot="90.0 -90.0 0.0" size="5 99 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-3.0 -0.0 0.0"/>
+					<voxbox pos="5.0 0.9 -0.1" rot="90.0 180.0 0.0" size="1 99 2" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="1.0 0.0 2.0"/>
+					<voxbox pos="-4.8 0.9 -0.1" rot="90.0 180.0 0.0" size="1 99 2" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="1.0 0.0 2.0"/>
+					<voxbox pos="0.01593 5.34264 -0.2" rot="131.0 -90.0 0.0" size="3 78 3" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 -17.0 1.0"/>
+					<voxbox pos="0.01593 5.34264 0.1" rot="131.0 90.0 0.0" size="3 78 3" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 -17.0 1.0"/>
+				</group>
+			</group>
+			<group name="Roof Wall" pos="-0.1 1.1 -5.1" rot="0.0 -180.0 0.0" prop0="texture=10 0.4">
+				<voxbox pos="0.0 0.0 0.0" rot="0.0 -90.0 0.0" size="1 38 45" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Roof Wall Beams" offset="1.0 0.0 -0.0"/>
+				<voxbox pos="0.0 0.0 0.1" rot="0.0 90.0 0.0" size="1 38 45" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Roof Wall Beams" offset="0.0 0.0 0.0"/>
+				<voxagon pos="0.0 1.1 -0.1" rot="90.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_plaster_exposed.vox" offset="0 25" axis="y" extrude="1">
+					<vertex pos="4.7 1.1"/>
+					<vertex pos="1.0 1.1"/>
+					<vertex pos="-4.6 1.1"/>
+					<vertex pos="0.0 -2.8"/>
+				</voxagon>
+				<group name="Roof Beams" pos="0.0 -1.1 0.1" rot="0.0 0.0 0.0">
+					<voxbox pos="4.9 1.1 -0.4" rot="90.0 -90.0 0.0" size="5 99 4" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-3.0 0.0 -0.0"/>
+					<voxbox pos="0.01593 5.34264 -0.2" rot="131.0 -90.0 0.0" size="3 78 3" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 -17.0 1.0"/>
+					<voxbox pos="0.01593 5.34264 0.1" rot="131.0 90.0 0.0" size="3 78 3" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="-1.0 -17.0 1.0"/>
+				</group>
+			</group>
+			<group name="Roof" pos="-0.1 0.1 0.0" prop0="texture=7 .3">
+				<voxbox pos="5.93054 0.00045 -5.50001" rot="-41.0 -90.0 0.0" size="110 3 79" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tile" offset="-31.99999 0.0 0.0">
+					<voxbox pos="0.0 -0.2 0.0" rot="0.0 0.0 0.0" size="110 2 78" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wood Ceiling" offset="2.0 0.0 -1.0"/>
+				</voxbox>
+				<voxbox pos="-0.15 5.1 -5.5" size="3 4 110" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Peak Run" offset="0.0 0.0 0.0"/>
+				<voxbox pos="-5.969 0.0 5.5" rot="-41.0 90.0 0.0" size="110 3 80" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tile" offset="14.0 0.0 -1.0">
+					<voxbox pos="0.0 -0.2 0.0" rot="0.0 0.0 0.0" size="110 2 78" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wood Ceiling" offset="14.0 0.0 -1.0"/>
+				</voxbox>
+				<group name="Triangle Attic Window" pos="-3.0 1.5 2.25">
+					<voxagon name="CUTTER" pos="-0.137 0.498 0.0" rot="0.0 0.0 40.0" brush="hole" extrude="7">
+						<vertex pos="-1.0 -1.5"/>
+						<vertex pos="2.0 0.0"/>
+						<vertex pos="-1.0 1.5"/>
+					</voxagon>
+					<voxagon pos="-1.3 0.5 0.5" rot="90.0 90.0 -40.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tri Window Strip" offset="1" extrude="1">
+						<vertex pos="-0.7 -1.6"/>
+						<vertex pos="-0.4 -1.4"/>
+						<vertex pos="-0.4 0.7"/>
+						<vertex pos="-0.7 1.0"/>
+					</voxagon>
+					<voxagon pos="-0.4 1.1 0.8" rot="50.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tile" extrude="3">
+						<vertex pos="-1.0 -1.4"/>
+						<vertex pos="1.7 -1.4"/>
+						<vertex pos="-1.0 1.5"/>
+						<voxagon pos="0.0 -0.2 0.0" rot="0.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wood Ceiling" offset="4" extrude="2">
+							<vertex pos="-0.7 -1.3"/>
+							<vertex pos="1.6 -1.1"/>
+							<vertex pos="-0.4 1.1"/>
+							<vertex pos="-0.8 1.0"/>
+						</voxagon>
+					</voxagon>
+					<voxagon pos="0.3 1.1 -0.8" rot="50.0 180.0 0.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tile" extrude="3">
+						<vertex pos="-1.0 -1.4"/>
+						<vertex pos="1.7 -1.4"/>
+						<vertex pos="1.7 1.5"/>
+						<voxagon pos="0.0 -0.2 0.0" rot="0.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wood Ceiling" offset="4" extrude="2">
+							<vertex pos="-0.9 -1.2"/>
+							<vertex pos="1.0 -1.2"/>
+							<vertex pos="1.5 -1.2"/>
+							<vertex pos="1.5 1.0"/>
+							<vertex pos="1.0 1.0"/>
+						</voxagon>
+					</voxagon>
+					<voxagon pos="-1.2 0.9 0.7" rot="0.0 0.0 90.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tri Window Strip" offset="1" extrude="1">
+						<vertex pos="-0.7 -2.3"/>
+						<vertex pos="-0.4 -1.7"/>
+						<vertex pos="-0.4 0.4"/>
+						<vertex pos="-0.7 1.0"/>
+					</voxagon>
+					<voxagon pos="-0.8 1.3 0.7" rot="0.0 0.0 60.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Triangle Window - Slat" offset="1" extrude="1">
+						<vertex pos="-0.7 -2.0"/>
+						<vertex pos="-0.4 -1.6"/>
+						<vertex pos="-0.4 0.2"/>
+						<vertex pos="-0.7 0.5"/>
+					</voxagon>
+					<voxagon pos="-0.8 1.7 0.7" rot="0.0 0.0 60.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Triangle Window - Slat" offset="1" extrude="1">
+						<vertex pos="-0.7 -1.6"/>
+						<vertex pos="-0.4 -1.4"/>
+						<vertex pos="-0.4 0.0"/>
+						<vertex pos="-0.7 0.1"/>
+					</voxagon>
+					<voxagon pos="-0.8 2.1 0.7" rot="0.0 0.0 60.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Triangle Window - Slat" offset="1" extrude="1">
+						<vertex pos="-0.7 -1.3"/>
+						<vertex pos="-0.4 -1.1"/>
+						<vertex pos="-0.4 -0.3"/>
+						<vertex pos="-0.7 -0.1"/>
+					</voxagon>
+					<voxagon pos="-0.8 0.9 0.7" rot="0.0 0.0 60.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Triangle Window - Slat" offset="1" extrude="1">
+						<vertex pos="-0.7 -2.3"/>
+						<vertex pos="-0.4 -2.0"/>
+						<vertex pos="-0.4 -1.1"/>
+						<vertex pos="-0.4 0.6"/>
+						<vertex pos="-0.7 0.9"/>
+					</voxagon>
+					<voxagon pos="-1.2 0.5 -0.5" rot="90.0 -90.0 -40.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tri Window Strip" offset="1" extrude="1">
+						<vertex pos="-0.7 -1.8"/>
+						<vertex pos="-0.4 -1.2"/>
+						<vertex pos="-0.4 0.7"/>
+						<vertex pos="-0.7 1.0"/>
+					</voxagon>
+					<voxbox pos="1.15 2.2 -0.15" rot="0.0 -90.0 0.0" size="3 2 26" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Peak Run" offset="0.0 -1.0 4.0"/>
+					<voxbox pos="-0.99199 0.06222 -1.54263" rot="27.0 0.0 -49.0" size="1 33 2" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="1.0 -2.0 1.99997"/>
+					<voxbox pos="-1.05137 0.00336 1.44829" rot="-27.0 0.0 -49.0" size="1 34 2" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="1.0 -2.0 1.99997"/>
+					<voxbox pos="-1.05137 0.00336 1.44829" rot="-90.0 0.0 -49.0" size="1 28 2" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="1.0 -2.0 1.99997"/>
+				</group>
+				<group name="Triangle Attic Window" pos="-3.0 1.5 -2.45">
+					<voxagon name="CUTTER" pos="-0.137 0.498 0.0" rot="0.0 0.0 40.0" brush="hole" extrude="7">
+						<vertex pos="-1.0 -1.5"/>
+						<vertex pos="2.0 0.0"/>
+						<vertex pos="-1.0 1.5"/>
+					</voxagon>
+					<voxagon pos="-1.3 0.5 0.5" rot="90.0 90.0 -40.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tri Window Strip" offset="1" extrude="1">
+						<vertex pos="-0.7 -1.6"/>
+						<vertex pos="-0.4 -1.4"/>
+						<vertex pos="-0.4 0.7"/>
+						<vertex pos="-0.7 1.0"/>
+					</voxagon>
+					<voxagon pos="-0.4 1.1 0.8" rot="50.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tile" extrude="3">
+						<vertex pos="-1.0 -1.4"/>
+						<vertex pos="1.7 -1.4"/>
+						<vertex pos="-1.0 1.5"/>
+						<voxagon pos="0.0 -0.2 0.0" rot="0.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wood Ceiling" offset="4" extrude="2">
+							<vertex pos="-0.7 -1.3"/>
+							<vertex pos="1.6 -1.1"/>
+							<vertex pos="-0.4 1.1"/>
+							<vertex pos="-0.8 1.0"/>
+						</voxagon>
+					</voxagon>
+					<voxagon pos="0.3 1.1 -0.8" rot="50.0 180.0 0.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tile" extrude="3">
+						<vertex pos="-1.0 -1.4"/>
+						<vertex pos="1.7 -1.4"/>
+						<vertex pos="1.7 1.5"/>
+						<voxagon pos="0.0 -0.2 0.0" rot="0.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wood Ceiling" offset="4" extrude="2">
+							<vertex pos="-0.9 -1.2"/>
+							<vertex pos="1.0 -1.2"/>
+							<vertex pos="1.5 -1.2"/>
+							<vertex pos="1.5 1.0"/>
+							<vertex pos="1.0 1.0"/>
+						</voxagon>
+					</voxagon>
+					<voxagon pos="-1.2 0.9 0.7" rot="0.0 0.0 90.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tri Window Strip" offset="1" extrude="1">
+						<vertex pos="-0.7 -2.3"/>
+						<vertex pos="-0.4 -1.7"/>
+						<vertex pos="-0.4 0.4"/>
+						<vertex pos="-0.7 1.0"/>
+					</voxagon>
+					<voxagon pos="-0.8 1.3 0.7" rot="0.0 0.0 60.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Triangle Window - Slat" offset="1" extrude="1">
+						<vertex pos="-0.7 -2.0"/>
+						<vertex pos="-0.4 -1.6"/>
+						<vertex pos="-0.4 0.2"/>
+						<vertex pos="-0.7 0.5"/>
+					</voxagon>
+					<voxagon pos="-0.8 1.7 0.7" rot="0.0 0.0 60.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Triangle Window - Slat" offset="1" extrude="1">
+						<vertex pos="-0.7 -1.6"/>
+						<vertex pos="-0.4 -1.4"/>
+						<vertex pos="-0.4 0.0"/>
+						<vertex pos="-0.7 0.1"/>
+					</voxagon>
+					<voxagon pos="-0.8 2.1 0.7" rot="0.0 0.0 60.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Triangle Window - Slat" offset="1" extrude="1">
+						<vertex pos="-0.7 -1.3"/>
+						<vertex pos="-0.4 -1.1"/>
+						<vertex pos="-0.4 -0.3"/>
+						<vertex pos="-0.7 -0.1"/>
+					</voxagon>
+					<voxagon pos="-0.8 0.9 0.7" rot="0.0 0.0 60.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Triangle Window - Slat" offset="1" extrude="1">
+						<vertex pos="-0.7 -2.3"/>
+						<vertex pos="-0.4 -2.0"/>
+						<vertex pos="-0.4 -1.1"/>
+						<vertex pos="-0.4 0.6"/>
+						<vertex pos="-0.7 0.9"/>
+					</voxagon>
+					<voxagon pos="-1.2 0.5 -0.5" rot="90.0 -90.0 -40.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tri Window Strip" offset="1" extrude="1">
+						<vertex pos="-0.7 -1.8"/>
+						<vertex pos="-0.4 -1.2"/>
+						<vertex pos="-0.4 0.7"/>
+						<vertex pos="-0.7 1.0"/>
+					</voxagon>
+					<voxbox pos="1.15 2.2 -0.15" rot="0.0 -90.0 0.0" size="3 2 26" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Peak Run" offset="0.0 -1.0 0.0"/>
+					<voxbox pos="-0.99199 0.06222 -1.54263" rot="27.0 0.0 -49.0" size="1 33 2" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="1.0 -2.0 1.99997"/>
+					<voxbox pos="-1.05137 0.00336 1.44829" rot="-27.0 0.0 -49.0" size="1 34 2" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="1.0 -2.0 1.99997"/>
+					<voxbox pos="-1.05137 0.00336 1.44829" rot="-90.0 0.0 -49.0" size="1 28 2" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="1.0 -2.0 1.99997"/>
+				</group>
+				<group name="Triangle Attic Window" pos="3.0 1.5 2.25" rot="0.0 -180.0 0.0">
+					<voxagon name="CUTTER" pos="-0.137 0.498 0.0" rot="0.0 0.0 40.0" brush="hole" extrude="7">
+						<vertex pos="-1.0 -1.5"/>
+						<vertex pos="2.0 0.0"/>
+						<vertex pos="-1.0 1.5"/>
+					</voxagon>
+					<voxagon pos="-1.3 0.5 0.5" rot="90.0 90.0 -40.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tri Window Strip" offset="1" extrude="1">
+						<vertex pos="-0.7 -1.6"/>
+						<vertex pos="-0.4 -1.4"/>
+						<vertex pos="-0.4 0.7"/>
+						<vertex pos="-0.7 1.0"/>
+					</voxagon>
+					<voxagon pos="-0.4 1.1 0.8" rot="50.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tile" extrude="3">
+						<vertex pos="-1.0 -1.4"/>
+						<vertex pos="1.7 -1.4"/>
+						<vertex pos="-1.0 1.5"/>
+						<voxagon pos="0.0 -0.2 0.0" rot="0.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wood Ceiling" offset="4" extrude="2">
+							<vertex pos="-0.7 -1.3"/>
+							<vertex pos="1.6 -1.1"/>
+							<vertex pos="-0.4 1.1"/>
+							<vertex pos="-0.8 1.0"/>
+						</voxagon>
+					</voxagon>
+					<voxagon pos="0.3 1.1 -0.8" rot="50.0 180.0 0.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tile" extrude="3">
+						<vertex pos="-1.0 -1.4"/>
+						<vertex pos="1.7 -1.4"/>
+						<vertex pos="1.7 1.5"/>
+						<voxagon pos="0.0 -0.2 0.0" rot="0.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wood Ceiling" offset="4" extrude="2">
+							<vertex pos="-0.9 -1.2"/>
+							<vertex pos="1.0 -1.2"/>
+							<vertex pos="1.5 -1.2"/>
+							<vertex pos="1.5 1.0"/>
+							<vertex pos="1.0 1.0"/>
+						</voxagon>
+					</voxagon>
+					<voxagon pos="-1.2 0.9 0.7" rot="0.0 0.0 90.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tri Window Strip" offset="1" extrude="1">
+						<vertex pos="-0.7 -2.3"/>
+						<vertex pos="-0.4 -1.7"/>
+						<vertex pos="-0.4 0.4"/>
+						<vertex pos="-0.7 1.0"/>
+					</voxagon>
+					<voxagon pos="-0.8 1.3 0.7" rot="0.0 0.0 60.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Triangle Window - Slat" offset="1" extrude="1">
+						<vertex pos="-0.7 -2.0"/>
+						<vertex pos="-0.4 -1.6"/>
+						<vertex pos="-0.4 0.2"/>
+						<vertex pos="-0.7 0.5"/>
+					</voxagon>
+					<voxagon pos="-0.8 1.7 0.7" rot="0.0 0.0 60.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Triangle Window - Slat" offset="1" extrude="1">
+						<vertex pos="-0.7 -1.6"/>
+						<vertex pos="-0.4 -1.4"/>
+						<vertex pos="-0.4 0.0"/>
+						<vertex pos="-0.7 0.1"/>
+					</voxagon>
+					<voxagon pos="-0.8 2.1 0.7" rot="0.0 0.0 60.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Triangle Window - Slat" offset="1" extrude="1">
+						<vertex pos="-0.7 -1.3"/>
+						<vertex pos="-0.4 -1.1"/>
+						<vertex pos="-0.4 -0.3"/>
+						<vertex pos="-0.7 -0.1"/>
+					</voxagon>
+					<voxagon pos="-0.8 0.9 0.7" rot="0.0 0.0 60.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Triangle Window - Slat" offset="1" extrude="1">
+						<vertex pos="-0.7 -2.3"/>
+						<vertex pos="-0.4 -2.0"/>
+						<vertex pos="-0.4 -1.1"/>
+						<vertex pos="-0.4 0.6"/>
+						<vertex pos="-0.7 0.9"/>
+					</voxagon>
+					<voxagon pos="-1.2 0.5 -0.5" rot="90.0 -90.0 -40.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tri Window Strip" offset="1" extrude="1">
+						<vertex pos="-0.7 -1.8"/>
+						<vertex pos="-0.4 -1.2"/>
+						<vertex pos="-0.4 0.7"/>
+						<vertex pos="-0.7 1.0"/>
+					</voxagon>
+					<voxbox pos="1.15 2.2 -0.15" rot="0.0 -90.0 0.0" size="3 2 26" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Peak Run" offset="0.0 -1.0 0.0"/>
+					<voxbox pos="-0.99199 0.06222 -1.54263" rot="27.0 0.0 -49.0" size="1 33 2" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="1.0 -2.0 1.99997"/>
+					<voxbox pos="-1.05137 0.00336 1.44829" rot="-27.0 0.0 -49.0" size="1 34 2" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="1.0 -2.0 1.99997"/>
+					<voxbox pos="-1.05137 0.00336 1.44829" rot="-90.0 0.0 -49.0" size="1 28 2" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="1.0 -2.0 1.99997"/>
+				</group>
+				<group name="Triangle Attic Window" pos="3.0 1.5 -2.45001" rot="0.0 -180.0 0.0">
+					<voxagon name="CUTTER" pos="-0.137 0.498 0.0" rot="0.0 0.0 40.0" brush="hole" extrude="7">
+						<vertex pos="-1.0 -1.5"/>
+						<vertex pos="2.0 0.0"/>
+						<vertex pos="-1.0 1.5"/>
+					</voxagon>
+					<voxagon pos="-1.3 0.5 0.5" rot="90.0 90.0 -40.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tri Window Strip" offset="1" extrude="1">
+						<vertex pos="-0.7 -1.6"/>
+						<vertex pos="-0.4 -1.4"/>
+						<vertex pos="-0.4 0.7"/>
+						<vertex pos="-0.7 1.0"/>
+					</voxagon>
+					<voxagon pos="-0.4 1.1 0.8" rot="50.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tile" extrude="3">
+						<vertex pos="-1.0 -1.4"/>
+						<vertex pos="1.7 -1.4"/>
+						<vertex pos="-1.0 1.5"/>
+						<voxagon pos="0.0 -0.2 0.0" rot="0.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wood Ceiling" offset="4" extrude="2">
+							<vertex pos="-0.7 -1.3"/>
+							<vertex pos="1.6 -1.1"/>
+							<vertex pos="-0.4 1.1"/>
+							<vertex pos="-0.8 1.0"/>
+						</voxagon>
+					</voxagon>
+					<voxagon pos="0.3 1.1 -0.8" rot="50.0 180.0 0.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tile" extrude="3">
+						<vertex pos="-1.0 -1.4"/>
+						<vertex pos="1.7 -1.4"/>
+						<vertex pos="1.7 1.5"/>
+						<voxagon pos="0.0 -0.2 0.0" rot="0.0 0.0 0.0" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wood Ceiling" offset="4" extrude="2">
+							<vertex pos="-0.9 -1.2"/>
+							<vertex pos="1.0 -1.2"/>
+							<vertex pos="1.5 -1.2"/>
+							<vertex pos="1.5 1.0"/>
+							<vertex pos="1.0 1.0"/>
+						</voxagon>
+					</voxagon>
+					<voxagon pos="-1.2 0.9 0.7" rot="0.0 0.0 90.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tri Window Strip" offset="1" extrude="1">
+						<vertex pos="-0.7 -2.3"/>
+						<vertex pos="-0.4 -1.7"/>
+						<vertex pos="-0.4 0.4"/>
+						<vertex pos="-0.7 1.0"/>
+					</voxagon>
+					<voxagon pos="-0.8 1.3 0.7" rot="0.0 0.0 60.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Triangle Window - Slat" offset="1" extrude="1">
+						<vertex pos="-0.7 -2.0"/>
+						<vertex pos="-0.4 -1.6"/>
+						<vertex pos="-0.4 0.2"/>
+						<vertex pos="-0.7 0.5"/>
+					</voxagon>
+					<voxagon pos="-0.8 1.7 0.7" rot="0.0 0.0 60.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Triangle Window - Slat" offset="1" extrude="1">
+						<vertex pos="-0.7 -1.6"/>
+						<vertex pos="-0.4 -1.4"/>
+						<vertex pos="-0.4 0.0"/>
+						<vertex pos="-0.7 0.1"/>
+					</voxagon>
+					<voxagon pos="-0.8 2.1 0.7" rot="0.0 0.0 60.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Triangle Window - Slat" offset="1" extrude="1">
+						<vertex pos="-0.7 -1.3"/>
+						<vertex pos="-0.4 -1.1"/>
+						<vertex pos="-0.4 -0.3"/>
+						<vertex pos="-0.7 -0.1"/>
+					</voxagon>
+					<voxagon pos="-0.8 0.9 0.7" rot="0.0 0.0 60.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Triangle Window - Slat" offset="1" extrude="1">
+						<vertex pos="-0.7 -2.3"/>
+						<vertex pos="-0.4 -2.0"/>
+						<vertex pos="-0.4 -1.1"/>
+						<vertex pos="-0.4 0.6"/>
+						<vertex pos="-0.7 0.9"/>
+					</voxagon>
+					<voxagon pos="-1.2 0.5 -0.5" rot="90.0 -90.0 -40.0" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Tri Window Strip" offset="1" extrude="1">
+						<vertex pos="-0.7 -1.8"/>
+						<vertex pos="-0.4 -1.2"/>
+						<vertex pos="-0.4 0.7"/>
+						<vertex pos="-0.7 1.0"/>
+					</voxagon>
+					<voxbox pos="1.15 2.2 -0.15" rot="0.0 -90.0 0.0" size="3 2 26" brush="MOD/vox/House Parts/greentown_roof_tiles.vox" object="Roof Peak Run" offset="0.0 -1.0 0.0"/>
+					<voxbox pos="-0.99199 0.06222 -1.54263" rot="27.0 0.0 -49.0" size="1 33 2" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="1.0 -2.0 1.99997"/>
+					<voxbox pos="-1.05137 0.00336 1.44829" rot="-27.0 0.0 -49.0" size="1 34 2" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="1.0 -2.0 1.99997"/>
+					<voxbox pos="-1.05137 0.00336 1.44829" rot="-90.0 0.0 -49.0" size="1 28 2" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Beam" offset="1.0 -2.0 1.99997"/>
+				</group>
+			</group>
+		</group>
+		<group name="Floor" pos="0.0 -0.2 0.0" rot="0.0 180.0 0.0">
+			<voxbox pos="-5.1 0.0 -5.1" rot="0.0 0.0 0.0" texture="5 0.3" size="102 2 102" brush="MOD/vox/House Parts/greentown_wooden_assets.vox" object="Wood Floor" offset="0.0 0.0 -153.0"/>
+			<voxbox pos="-5.1 0.1 -5.1" rot="0.0 0.0 0.0" texture="5 0.3" size="51 1 51" brush="MOD/vox/House Parts/greentown_interior_floors.vox" object="Tiles - Squares" offset="0.0 0.0 -153.0"/>
+			<voxbox pos="-5.1 0.1 0.4" rot="0.0 90.0 0.0" texture="5 0.3" size="4 1 51" brush="MOD/vox/House Parts/greentown_metal_floortrim.vox" object="Straight" offset="0.0 0.0 -153.0"/>
+			<voxbox pos="0.4 0.1 0.0" rot="0.0 180.0 0.0" texture="5 0.3" size="4 1 51" brush="MOD/vox/House Parts/greentown_metal_floortrim.vox" object="Straight" offset="0.0 0.0 -153.0"/>
+			<voxbox pos="-4.5 0.1 4.9" rot="0.0 180.0 0.0" texture="5 0.3" size="4 1 49" brush="MOD/vox/House Parts/greentown_metal_floortrim.vox" object="Straight" offset="0.0 0.0 -153.0"/>
+			<voxbox pos="0.0 0.1 -4.5" rot="0.0 90.0 0.0" texture="5 0.3" size="4 1 51" brush="MOD/vox/House Parts/greentown_metal_floortrim.vox" object="Straight" offset="0.0 0.0 -153.0"/>
+			<voxbox pos="4.5 0.1 -4.9" rot="0.0 0.0 0.0" texture="5 0.3" size="4 1 98" brush="MOD/vox/House Parts/greentown_metal_floortrim.vox" object="Straight" offset="0.0 0.0 -153.0"/>
+			<voxbox pos="4.9 0.1 4.5" rot="0.0 -90.0 0.0" texture="5 0.3" size="4 1 98" brush="MOD/vox/House Parts/greentown_metal_floortrim.vox" object="Straight" offset="0.0 0.0 -153.0"/>
+			<voxbox pos="0.0 0.1 0.4" rot="0.0 90.0 0.0" texture="5 0.3" size="4 1 4" brush="MOD/vox/House Parts/greentown_metal_floortrim.vox" object="Corner"/>
+		</group>
+		<group name="Insets" pos="0.0 0.0 -0.1">
+			<voxbox pos="-4.6 0.0 -2.0" rot="0.0 -90.0 0.0" size="17 26 6" brush="MOD/vox/House Parts/greentown_insets.vox" object="Doorframe" offset="0.0 0.0 0.0">
+				<vox pos="0.8 0.0 0.4" prop="true" file="MOD/vox/House Parts/greentown_insets.vox" object="Red Wood Door Shop">
+					<joint pos="-0.6 0.6 -0.05" rot="-90.0 -180.0 0.0" type="hinge" limits="-90 90"/>
+					<joint pos="-0.6 1.8 -0.05" rot="-90.0 -180.0 0.0" type="hinge" limits="-90 90"/>
+				</vox>
+			</voxbox>
+			<voxbox name="Small Window" pos="-4.6 0.5 -4.2" rot="0.0 -90.0 0.0" size="14 21 6" brush="MOD/vox/House Parts/greentown_insets.vox" object="Windowframe - Single Small" offset="0.0 0.0 0.0">
+				<voxbox pos="0.2 0.2 0.2" rot="0.0 0.0 0.0" size="10 17 2" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window - Single Small" offset="0.0 0.0 -1.0">
+					<voxbox pos="0.01 0.75 0.0" rot="0.0 0.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="-0.05 1.15 0.0" rot="0.0 0.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.0 0.65 0.0" rot="180.0 180.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.11 1.65 0.0" rot="180.0 180.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.11 1.0 0.0" rot="180.0 180.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="-0.04 0.05 0.0" rot="0.0 0.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.05 0.65 0.1" rot="-180.0 0.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.1 1.15 0.1" rot="0.0 -180.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.56 1.15 0.1" rot="0.0 180.0 0.0" size="1 5 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.56 0.03 0.1" rot="0.0 180.0 0.0" size="1 5 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+				</voxbox>
+			</voxbox>
+			<voxbox name="Small Window" pos="-4.1 0.5 4.7" rot="0.0 0.0 0.0" size="14 21 6" brush="MOD/vox/House Parts/greentown_insets.vox" object="Windowframe - Single Small" offset="0.0 0.0 0.0">
+				<voxbox pos="0.2 0.2 0.2" rot="0.0 0.0 0.0" size="10 17 2" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window - Single Small" offset="0.0 0.0 -1.0">
+					<voxbox pos="0.01 0.75 0.0" rot="0.0 0.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="-0.05 1.15 0.0" rot="0.0 0.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.0 0.65 0.0" rot="180.0 180.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.11 1.65 0.0" rot="180.0 180.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.11 1.0 0.0" rot="180.0 180.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="-0.04 0.05 0.0" rot="0.0 0.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.05 0.65 0.1" rot="-180.0 0.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.1 1.15 0.1" rot="0.0 -180.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.56 1.15 0.1" rot="0.0 180.0 0.0" size="1 5 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.56 0.03 0.1" rot="0.0 180.0 0.0" size="1 5 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+				</voxbox>
+			</voxbox>
+			<voxbox name="Small Window" pos="-2.2 0.5 4.7" rot="0.0 0.0 0.0" size="14 21 6" brush="MOD/vox/House Parts/greentown_insets.vox" object="Windowframe - Single Small" offset="0.0 0.0 0.0">
+				<voxbox pos="0.2 0.2 0.2" rot="0.0 0.0 0.0" size="10 17 2" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window - Single Small" offset="0.0 0.0 -1.0">
+					<voxbox pos="0.01 0.75 0.0" rot="0.0 0.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="-0.05 1.15 0.0" rot="0.0 0.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.0 0.65 0.0" rot="180.0 180.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.11 1.65 0.0" rot="180.0 180.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.11 1.0 0.0" rot="180.0 180.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="-0.04 0.05 0.0" rot="0.0 0.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.05 0.65 0.1" rot="-180.0 0.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.1 1.15 0.1" rot="0.0 -180.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.56 1.15 0.1" rot="0.0 180.0 0.0" size="1 5 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.56 0.03 0.1" rot="0.0 180.0 0.0" size="1 5 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+				</voxbox>
+			</voxbox>
+			<voxbox name="Small Window" pos="-4.6 0.5 0.5" rot="0.0 -90.0 0.0" size="40 22 6" brush="MOD/vox/House Parts/greentown_insets.vox" object="Windowframe - Wide" offset="0.0 0.0 0.0">
+				<voxbox pos="0.2 0.2 0.2" rot="0.0 0.0 0.0" size="36 18 2" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window - Wide" offset="-0.0 0.0 -3.0">
+					<voxbox pos="0.11 0.03 0.15" rot="0.0 -180.0 40.0" size="1 22 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.12497 0.67014 0.15" rot="0.0 -180.0 40.0" size="1 14 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.00002 5.0 0.0"/>
+					<voxbox pos="0.08799 1.09279 0.15" rot="0.0 -180.0 40.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.00005 8.0 0.0"/>
+					<voxbox pos="1.10234 0.04584 0.15" rot="0.0 -180.0 40.0" size="1 6 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.00005 8.0 0.0"/>
+					<voxbox pos="0.57095 0.03484 0.15" rot="0.0 -180.0 40.0" size="1 14 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.00002 3.0 0.0"/>
+					<voxbox pos="1.51 0.03 0.15" rot="0.0 180.0 0.0" size="1 17 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.11 0.03 0.15" rot="0.0 180.0 0.0" size="1 17 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.56 0.03 0.15" rot="0.0 180.0 0.0" size="1 17 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.86 0.53 0.15" rot="0.0 -180.0 -45.0" size="1 5 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.51 0.88 0.15" rot="0.0 180.0 45.0" size="1 5 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.01 1.73 0.15" rot="180.0 0.0 40.0" size="1 22 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.5414 1.71901 0.15" rot="180.0 0.0 40.0" size="1 14 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.00001 4.0 0.0"/>
+					<voxbox pos="-0.001 1.19861 0.15" rot="180.0 0.0 40.0" size="1 15 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.00001 3.0 0.0"/>
+					<voxbox pos="-0.012 0.66722 0.15" rot="180.0 0.0 40.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.00004 7.0 0.0"/>
+					<voxbox pos="0.9319 1.72033 0.15" rot="180.0 0.0 40.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="-0.00001 5.0 0.0"/>
+					<voxbox pos="3.51 0.03 0.05" rot="0.0 0.0 40.0" size="1 22 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="3.49503 0.67014 0.05" rot="0.0 0.0 40.0" size="1 14 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.00002 5.0 0.0"/>
+					<voxbox pos="3.53201 1.09279 0.05" rot="0.0 0.0 40.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.00005 8.0 0.0"/>
+					<voxbox pos="2.51766 0.04584 0.05" rot="0.0 0.0 40.0" size="1 6 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.00005 8.0 0.0"/>
+					<voxbox pos="3.04905 0.03484 0.05" rot="0.0 0.0 40.0" size="1 14 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.00002 3.0 0.0"/>
+					<voxbox pos="2.11 0.03 0.05" rot="0.0 0.0 0.0" size="1 17 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="2.51 0.03 0.05" rot="0.0 0.0 0.0" size="1 17 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="3.06 0.03 0.05" rot="0.0 0.0 0.0" size="1 17 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.76 0.53 0.05" rot="0.0 0.0 -45.0" size="1 5 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="2.11 0.88 0.05" rot="0.0 0.0 45.0" size="1 5 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.76 0.03 0.05" rot="0.0 0.0 0.0" size="1 17 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="3.61 1.73 0.05" rot="-180.0 180.0 40.0" size="1 22 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="3.0786 1.71901 0.05" rot="-180.0 180.0 40.0" size="1 14 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.00001 4.0 0.0"/>
+					<voxbox pos="3.621 1.19861 0.05" rot="-180.0 180.0 40.0" size="1 15 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.00001 3.0 0.0"/>
+					<voxbox pos="3.632 0.66722 0.05" rot="-180.0 180.0 40.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.00004 7.0 0.0"/>
+					<voxbox pos="2.6881 1.72033 0.05" rot="-180.0 180.0 40.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="-0.00001 5.0 0.0"/>
+				</voxbox>
+			</voxbox>
+			<voxbox pos="5.2 0.0 2.8" rot="0.0 -90.0 0.0" size="17 26 6" brush="MOD/vox/House Parts/greentown_insets.vox" object="Doorframe" offset="0.0 0.0 0.0">
+				<vox pos="0.8 0.0 0.4" prop="true" file="MOD/vox/House Parts/greentown_insets.vox" object="Green Wood Door Planks">
+					<joint pos="-0.6 0.6 -0.05" rot="-90.0 -180.0 0.0" type="hinge" limits="-90 90"/>
+					<joint pos="-0.6 1.8 -0.05" rot="-90.0 -180.0 0.0" type="hinge" limits="-90 90"/>
+				</vox>
+			</voxbox>
+			<voxbox name="Small Window" pos="5.2 0.5 0.59999" rot="0.0 -90.0 0.0" size="14 21 6" brush="MOD/vox/House Parts/greentown_insets.vox" object="Windowframe - Single Small" offset="0.0 0.0 0.0">
+				<voxbox pos="0.2 0.2 0.2" rot="0.0 0.0 0.0" size="10 17 2" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window - Single Small" offset="0.0 0.0 -1.0">
+					<voxbox pos="0.01 0.75 0.0" rot="0.0 0.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="-0.05 1.15 0.0" rot="0.0 0.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.0 0.65 0.0" rot="180.0 180.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.11 1.65 0.0" rot="180.0 180.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.11 1.0 0.0" rot="180.0 180.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="-0.04 0.05 0.0" rot="0.0 0.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.05 0.65 0.1" rot="-180.0 0.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.1 1.15 0.1" rot="0.0 -180.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.56 1.15 0.1" rot="0.0 180.0 0.0" size="1 5 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.56 0.03 0.1" rot="0.0 180.0 0.0" size="1 5 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+				</voxbox>
+				<vox pos="1.0 0.1 0.0" file="MOD/vox/House Parts/greentown_insets.vox" object="Window Shutter"/>
+				<vox pos="0.4 0.1 0.0" file="MOD/vox/House Parts/greentown_insets.vox" object="Window Shutter"/>
+			</voxbox>
+			<voxbox name="Small Window" pos="0.7 0.5 -5.2" rot="0.0 0.0 0.0" size="14 21 6" brush="MOD/vox/House Parts/greentown_insets.vox" object="Windowframe - Single Small" offset="0.0 0.0 0.0">
+				<voxbox pos="0.2 0.2 0.2" rot="0.0 0.0 0.0" size="10 17 2" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window - Single Small" offset="0.0 0.0 -1.0">
+					<voxbox pos="0.01 0.75 0.0" rot="0.0 0.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="-0.05 1.15 0.0" rot="0.0 0.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.0 0.65 0.0" rot="180.0 180.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.11 1.65 0.0" rot="180.0 180.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.11 1.0 0.0" rot="180.0 180.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="-0.04 0.05 0.0" rot="0.0 0.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.05 0.65 0.1" rot="-180.0 0.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.1 1.15 0.1" rot="0.0 -180.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.56 1.15 0.1" rot="0.0 180.0 0.0" size="1 5 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.56 0.03 0.1" rot="0.0 180.0 0.0" size="1 5 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+				</voxbox>
+			</voxbox>
+			<voxbox name="Small Window" pos="2.6 0.5 -5.2" rot="0.0 0.0 0.0" size="14 21 6" brush="MOD/vox/House Parts/greentown_insets.vox" object="Windowframe - Single Small" offset="0.0 0.0 0.0">
+				<voxbox pos="0.2 0.2 0.2" rot="0.0 0.0 0.0" size="10 17 2" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window - Single Small" offset="0.0 0.0 -1.0">
+					<voxbox pos="0.01 0.75 0.0" rot="0.0 0.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="-0.05 1.15 0.0" rot="0.0 0.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.0 0.65 0.0" rot="180.0 180.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.11 1.65 0.0" rot="180.0 180.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.11 1.0 0.0" rot="180.0 180.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="-0.04 0.05 0.0" rot="0.0 0.0 -45.0" size="1 13 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.05 0.65 0.1" rot="-180.0 0.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="1.1 1.15 0.1" rot="0.0 -180.0 -45.0" size="1 8 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.56 1.15 0.1" rot="0.0 180.0 0.0" size="1 5 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+					<voxbox pos="0.56 0.03 0.1" rot="0.0 180.0 0.0" size="1 5 1" brush="MOD/vox/House Parts/greentown_insets.vox" object="Window Beam Voxbox" offset="0.0 0.0 0.0"/>
+				</voxbox>
+			</voxbox>
+		</group>
+	</group>
+</scene>
+

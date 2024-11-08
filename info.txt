@@ -1,0 +1,21 @@
+en_name = Basic
+ru_name = Базовый
+de_name = Basis
+es_name = Básico
+it_name = Base
+fr_name = Basiques
+jp_name = 基本
+pl_name = Podstawowy
+sc_name = 基础工具
+
+author = Tuxedo Labs
+
+en_description = A small sandbox level for demonstration purposes with a single house.
+ru_description = Небольшой демонстрационный уровень-песочница с одним домом.
+de_description = Ein kleiner Sandbox-Level mit einem einzelnen Haus zu Demonstrationszwecken.
+es_description = Un pequeño nivel sandbox con fines explicativos ambientado en una sola casa.
+it_description = Un piccolo livello sandbox con una singola casa a scopo dimostrativo.
+fr_description = Un petit niveau Bac à sable à des fins de démonstration avec une seule maison.
+jp_description = 一軒家を使ったデモ用の小さなサンドボックスのレベル。
+pl_description = Mały poziom typu sandbox do celów demonstracyjnych z jednym domem.
+sc_description = 用于演示的小型沙盒关卡，只有一幢房屋。

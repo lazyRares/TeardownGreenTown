@@ -38,6 +38,7 @@
 			<spawnpoint pos="-14.4 7.1 88.9" rot="0.0 180.0 0.0"/>
 		</group>
 		<script file="MOD/script/splash.lua"/>
+		<script file="MOD/script/storm.lua"/>
 	</group>
 	<group name="Foundational Outer Walls" pos="-11.9 5.8 66.1">
 		<group name="Stair Railing" pos="-7.5 0.0 0.0" rot="0.0 0.0 0.0">

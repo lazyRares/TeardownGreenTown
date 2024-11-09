@@ -4,7 +4,8 @@
 todo: 
     make this only happen when you load in from the menu, not on restart
     make the three dots to dot stuff
-    add more screens
+    maybe make it so that the whole dark square with the "connecting" text is done in td
+        >for the vbucks scam one there is no need for the dark square in td, still the text tho
 ]]
 
 function init()

@@ -1,6 +1,6 @@
 function init()
-    form = LoadSound("MOD/snd/storm_forming.ogg")
-    advance = LoadSound("MOD/snd/storm_advance.ogg")
+    form = LoadSound("MOD/snd/storm/storm_forming.ogg")
+    advance = LoadSound("MOD/snd/storm/storm_advance.ogg")
 
     timer = 0
     next_advance = 60
